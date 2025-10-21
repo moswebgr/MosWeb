@@ -1,0 +1,77 @@
+/* Splash Screen Container */
+.splash-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Loading Text */
+.splash-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  animation: pulseGlow 1.5s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(30, 64, 175, 0.5);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Pulse Glow Animation */
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(30, 64, 175, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 0 0 20px rgba(30, 64, 175, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(30, 64, 175, 0.5);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .splash-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .splash-container {
+    padding: 1rem;
+  }
+
+  .splash-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .splash-title {
+    font-size: 1.8rem;
+  }
+}

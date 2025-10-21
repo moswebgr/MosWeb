@@ -1,0 +1,220 @@
+
+.home-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  background: black;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 138, 4, 0.08) 0%, transparent 60%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+.hero {
+  text-align: center;
+  margin-bottom: 6rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.hero .highlight {
+  color: #3b82f6;
+  font-weight: 900;
+}
+
+.hero-subtitle {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #b3b3b3;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #3b82f6;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-3px);
+}
+
+/* Expertise Section */
+.expertise {
+  position: relative;
+  z-index: 2;
+}
+
+.expertise-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: -0.015em;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 3rem;
+}
+
+/* Expertise Cards */
+.expertise-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.expertise-card h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+}
+
+.expertise-card p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 1024px) {
+  .home-container {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+
+  .expertise-title {
+    font-size: 2.25rem;
+  }
+
+  .expertise-grid {
+    gap: 2rem;
+  }
+
+  .expertise-card {
+    padding: 2rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.8rem;
+  }
+
+  .expertise-title {
+    font-size: 2rem;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .expertise-card {
+    padding: 1.5rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .cta-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .expertise-title {
+    font-size: 1.75rem;
+  }
+
+  .expertise-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .expertise-card p {
+    font-size: 1rem;
+  }
+}

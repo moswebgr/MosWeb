@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="menu" fill-rule="nonzero">
+            <g id="Group-4">
+                <polygon id="Rectangle-path" fill="#FFFFFF" transform="translate(40.359592, 56.355786) rotate(-89.450000) translate(-40.359592, -56.355786) " points="39.915418 39.3664498 40.8101532 39.3662848 40.8037659 73.3451217 39.9090306 73.3452866"></polygon>
+                <polygon id="Rectangle-path" fill="#FFFFFF" transform="translate(29.949329, 40.053626) rotate(-58.230000) translate(-29.949329, -40.053626) " points="10.4449735 39.7810939 49.4613766 39.4438431 49.4536838 40.3261582 10.4372807 40.6634091"></polygon>
+                <polygon id="Rectangle-path" fill="#E4003A" transform="translate(51.360710, 41.181052) rotate(-34.290000) translate(-51.360710, -41.181052) " points="51.0766351 23.6839801 51.9596408 23.6759808 51.6447851 58.6781233 50.7617793 58.6861227"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
