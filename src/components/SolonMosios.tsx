@@ -66,7 +66,7 @@ const internships: Internship[] = [
     role: "Business Administration Executive",
     period: "Oct 2022 – Apr 2023",
     desc: "",
-    logo: "https://kapetas.eu/wp-content/uploads/2019/11/kaptus_logo.png"
+    logo: "https://scontent.fskg4-1.fna.fbcdn.net/v/t39.30808-1/299349795_434439782037728_1946564003991852336_n.png?stp=dst-png_s200x200&_nc_cat=100&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=w48XaTh4OecQ7kNvwHLGmWH&_nc_oc=AdnfKXgbfwmpCjwHKnXvZqF9CLst0EdNS2M0TUb5NBoh1Q74qbLQEJKlMafu2dUlFoo&_nc_zt=24&_nc_ht=scontent.fskg4-1.fna&_nc_gid=2AJBYp1hmfhWyqEg_B3pXw&oh=00_AffPkA7aXTBNMiyJrzww5tgcdUendHQvnwQQcUQtwqlxrQ&oe=68FF169C"
   },
 ];
 
@@ -183,4 +183,5 @@ export default function SolonMosios() {
       </div>
     </div>
   );
+
 }
