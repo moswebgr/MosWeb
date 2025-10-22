@@ -48,14 +48,14 @@ const internships: Internship[] = [
     company: "GRDiscovery",
     role: "IT Applications Technician",
     period: "Sep 2024 – Mar 2025",
-    desc: "Practical experience in web apps, database management, and IT support.",
+    desc: "",
     logo: "/logos/social-1.png"
   },
   {
     company: "Καπέτας Κατασκευαστική",
     role: "Business Administration Executive",
     period: "Oct 2022 – Apr 2023",
-    desc: "Assisted in administrative management, documentation, and project coordination.",
+    desc: "",
     logo: "/logos/kaptus_logo.png"
   },
 ];
