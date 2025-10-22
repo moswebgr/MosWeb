@@ -39,8 +39,18 @@ const hobbies: Hobby[] = [
 ];
 
 const education: Education[] = [
-  { school: "ΙΕΚ ΑΚΜΗ", degree: "IT Applications Technician", period: "2021 – 2023", logo: "/logos/AKMI_Site_Header_304x98.webp" },
-  { school: "IEK DELTA 360", degree: "Business Administration Executive", period: "2019 – 2021", logo: "/logos/iekdelta_logo.svg" },
+  { 
+    school: "ΙΕΚ ΑΚΜΗ", 
+    degree: "IT Applications Technician", 
+    period: "2021 – 2023", 
+    logo: "https://iek-akmi.edu.gr/wp-content/uploads/2020/03/AKMI_Site_Header_304x98.png" 
+  },
+  { 
+    school: "IEK DELTA 360", 
+    degree: "Business Administration Executive", 
+    period: "2019 – 2021", 
+    logo: "https://www.iekdelta360.gr/iekdelta/img/iekdelta_logo.svg" 
+  },
 ];
 
 const internships: Internship[] = [
@@ -49,16 +59,18 @@ const internships: Internship[] = [
     role: "IT Applications Technician",
     period: "Sep 2024 – Mar 2025",
     desc: "",
-    logo: "/logos/social-1.png"
+    logo: "https://grdiscovery.com/wp-content/uploads/2025/08/social-1.png"
   },
   {
     company: "Καπέτας Κατασκευαστική",
     role: "Business Administration Executive",
     period: "Oct 2022 – Apr 2023",
     desc: "",
-    logo: "/logos/kaptus_logo.png"
+    logo: "https://kapetas.eu/wp-content/uploads/2019/11/kaptus_logo.png"
   },
 ];
+
+
 
 export default function SolonMosios() {
   return (
