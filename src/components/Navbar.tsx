@@ -19,7 +19,7 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
     <nav className="navbar" aria-label="Main navigation">
       {/* Brand/Logo */}
       <a href="/" className="navbar-logo">
-        <img src="https://domains.mosweb.gr/wp-content/uploads/2025/07/%CE%91%CE%BD%CF%8E%CE%BD%CF%85%CE%BC%CE%BF-%CF%83%CF%87%CE%AD%CE%B4%CE%B9%CE%BF-97x97.png" alt="MOSWEB Logo" className="logo-img" />
+        <img src="http://www.mosweb.gr/mosweb.png" alt="MOSWEB Logo" className="logo-img" />
         <span className="brand-text">MOSWEB</span>
       </a>
       {/* Hamburger Button */}
@@ -71,5 +71,6 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
   );
 
 }
+
 
 
