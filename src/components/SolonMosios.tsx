@@ -66,7 +66,7 @@ const internships: Internship[] = [
     role: "Business Administration Executive",
     period: "Oct 2022 – Apr 2023",
     desc: "",
-
+    logo: "https://kapetas.eu/wp-content/uploads/2019/11/kaptus_logo.png"
   },
 ];
 
@@ -185,5 +185,6 @@ export default function SolonMosios() {
   );
 
 }
+
 
 
