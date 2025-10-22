@@ -77,7 +77,7 @@ export default function Footer() {
       </div>
       <div className="vasilis-footer-bottom">
         <img
-          src="/logos/mosweb.png"
+          src="https://www.mosweb.gr/mosweb.png"
           alt="MosWeb Team Logo"
           className="vasilis-footer-logo"
         />
