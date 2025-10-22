@@ -19,7 +19,7 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
     <nav className="navbar" aria-label="Main navigation">
       {/* Brand/Logo */}
       <a href="/" className="navbar-logo">
-        <img src="/logos/mosweb.png" alt="MOSWEB Logo" className="logo-img" />
+        <img src="dist/assets/mosweb-E28drTPf.png" alt="MOSWEB Logo" className="logo-img" />
         <span className="brand-text">MOSWEB</span>
       </a>
       {/* Hamburger Button */}
