@@ -5,9 +5,15 @@ export default function Footer() {
     <footer className="vasilis-footer">
       <div className="vasilis-footer-container">
         <div className="vasilis-footer-column">
-          <h4 className="vasilis-footer-title">Portfolio</h4>
+          <h4 className="vasilis-footer-title">Projects</h4>
           <ul className="vasilis-footer-list">
-            <li><a href="Projects" className="vasilis-footer-link">Projects</a></li>
+              <li><a href="https://moswebgr.github.io/FitTracker/" className="vasilis-footer-link">FitTracker</a></li>
+              <li><a href="https://calendar.mosweb.gr/" className="vasilis-footer-link">Calendar</a></li>
+              <li><a href="Projects" className="vasilis-footer-link">Authenticator (Ruby)</a></li>
+              <li><a href="Projects" className="vasilis-footer-link">RPG Enemy Guide (C++)</a></li>
+              <li><a href="Projects" className="vasilis-footer-link">Rock Paper Scissors (C)</a></li>
+              <li><a href="https://hakairyu.itch.io/mastro-adventures" className="vasilis-footer-link">Mastro Adventures</a></li>
+              <li><a href="https://hakairyu.itch.io/rifts-a-world-apart" className="vasilis-footer-link">Rifts: A World Apart</a></li>
           </ul>
         </div>
         <div className="vasilis-footer-column">
