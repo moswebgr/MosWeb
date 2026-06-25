@@ -1,16 +1,52 @@
-# React + Vite
+# MosWeb
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official website of MosWeb, showcasing projects, web applications, and digital solutions.
 
-Currently, two official plugins are available:
+## 🌐 Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Visit: https://www.mosweb.gr
 
-## React Compiler
+## 🚀 About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+MosWeb is focused on creating modern web applications, digital platforms, and innovative software solutions. This repository contains the source code of the official MosWeb website.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Modern and responsive design
+- Fast and lightweight performance
+- Project showcase
+- Contact section
+- Optimized user experience
+
+## 🛠️ Technologies
+
+- React
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/moswebgr/MosWeb.git
+cd MosWeb
+npm install
+npm run dev
+```
+
+## 🏗️ Build
+
+```bash
+npm run build
+```
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 👨‍💻 Author
+
+Made with by MosWeb
+
+Website: https://www.mosweb.gr
