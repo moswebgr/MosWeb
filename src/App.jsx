@@ -33,10 +33,10 @@ function App() {
         <section className="hero section-wrap">
           <div className="hero-copy">
             <div className="availability"><span className="availability-dot" /> INDEPENDENT DIGITAL STUDIO</div>
-            <h1>We build digital<br /><span>things that matter.</span></h1>
+            <h1>I build digital<br /><span>things that matter.</span></h1>
             <p className="hero-lede">I specialize in building modern web applications and open-source software, creating practical digital tools with clear interfaces and real functionality.</p>
             <div className="hero-actions">
-              <a className="button button-dark" href="#work">Explore our work <Arrow /></a>
+              <a className="button button-dark" href="#work">Explore my projects <Arrow /></a>
               <a className="text-link" href="mailto:basilismoskofidis@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
             </div>
           </div>
@@ -51,7 +51,7 @@ function App() {
             <div className="art-spark">✳</div>
           </div>
           <div className="hero-bottom">
-            <span>DESIGN-LED. BUILT FOR REAL LIFE.</span>
+            <span>OPEN SOURCE. BUILT FOR REAL LIFE.</span>
             <a href="#work">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
           </div>
         </section>
@@ -70,7 +70,7 @@ function App() {
               <div className="section-label"><span>02</span> / SELECTED WORK</div>
               <h2>Ideas, made <span>real.</span></h2>
             </div>
-            <p>A growing collection of digital products built to make everyday work better.</p>
+            <p>A growing collection of open-source projects and useful digital tools.</p>
           </div>
 
           <article className="featured-project">
@@ -111,21 +111,21 @@ function App() {
         <section className="approach-section" id="process">
           <div className="section-wrap approach-inner">
             <div className="section-label"><span>03</span> / HOW WE THINK</div>
-            <div className="approach-copy"><h2>Less noise.<br /><span>More meaning.</span></h2><p>We believe the best digital experiences don’t need to shout. They need to solve the right problem, respect people’s time, and make the complex feel clear.</p><a className="button button-dark" href="mailto:basilismoskofidis@gmail.com">Have a project in mind? <Arrow /></a></div>
+            <div className="approach-copy"><h2>Less noise.<br /><span>More meaning.</span></h2><p>We believe the best digital experiences don’t need to shout. They need to solve the right problem, respect people’s time, and make the complex feel clear.</p><a className="button button-dark" href="mailto:basilismoskofidis@gmail.com">Explore my open-source work <Arrow /></a></div>
             <div className="principles"><div><span>01</span><h3>Purpose first</h3><p>Start with the problem, not the trend.</p></div><div><span>02</span><h3>Clarity in every detail</h3><p>Make every screen feel considered.</p></div><div><span>03</span><h3>Built to be useful</h3><p>Real functionality, not just a pretty surface.</p></div></div>
           </div>
         </section>
 
         <section className="contact-section section-wrap">
           <div className="contact-orb" aria-hidden="true">✳</div>
-          <div><div className="section-label"><span>04</span> / NEXT UP</div><h2>Have a good idea?<br /><span>Let’s make it happen.</span></h2></div>
-          <a className="button button-dark" href="mailto:basilismoskofidis@gmail.com">Get in touch <Arrow /></a>
+          <div><div className="section-label"><span>04</span> / NEXT UP</div><h2>Interested in what I build?<br /><span>Explore my projects.</span></h2></div>
+          <a className="button button-dark" href="mailto:basilismoskofidis@gmail.com">Contact me <Arrow /></a>
         </section>
       </main>
 
       <footer className="site-footer">
         <a className="brand footer-brand" href="#top"><img src={mosweb} alt="" /><span>MOS<span className="brand-accent">WEB</span></span></a>
-        <p>Independent thinking. Useful digital products.</p>
+        <p>Open-source projects. Useful digital products.</p>
         <div className="footer-bottom"><span>© {new Date().getFullYear()} MosWeb. All rights reserved.</span><span className="footer-credit">Made by <strong>Vasilis Moskofidis</strong></span><a href="#top">BACK TO TOP ↑</a><a href="mailto:basilismoskofidis@gmail.com">CONTACT</a></div>
       </footer>
     </div>
