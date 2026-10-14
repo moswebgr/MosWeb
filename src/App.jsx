@@ -26,7 +26,7 @@ function App() {
           <a href="#about">About</a>
           <a href="#process">Approach</a>
         </nav>
-        <a className="header-cta" href="mailto:hello@mosweb.gr">Let’s talk <Arrow /></a>
+        <a className="header-cta" href="mailto:basilismoskofidis@gmail.com">Let’s talk <Arrow /></a>
       </header>
 
       <main id="top">
@@ -37,7 +37,7 @@ function App() {
             <p className="hero-lede">Thoughtful web experiences and useful products, made with purpose, clarity, and a little curiosity.</p>
             <div className="hero-actions">
               <a className="button button-dark" href="#work">Explore our work <Arrow /></a>
-              <a className="text-link" href="mailto:hello@mosweb.gr">Start a conversation <span aria-hidden="true">↗</span></a>
+              <a className="text-link" href="mailto:basilismoskofidis@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
             </div>
           </div>
           <div className="hero-art" aria-label="Abstract geometric artwork representing digital ideas" role="img">
@@ -111,7 +111,7 @@ function App() {
         <section className="approach-section" id="process">
           <div className="section-wrap approach-inner">
             <div className="section-label"><span>03</span> / HOW WE THINK</div>
-            <div className="approach-copy"><h2>Less noise.<br /><span>More meaning.</span></h2><p>We believe the best digital experiences don’t need to shout. They need to solve the right problem, respect people’s time, and make the complex feel clear.</p><a className="button button-dark" href="mailto:hello@mosweb.gr">Have a project in mind? <Arrow /></a></div>
+            <div className="approach-copy"><h2>Less noise.<br /><span>More meaning.</span></h2><p>We believe the best digital experiences don’t need to shout. They need to solve the right problem, respect people’s time, and make the complex feel clear.</p><a className="button button-dark" href="mailto:basilismoskofidis@gmail.com">Have a project in mind? <Arrow /></a></div>
             <div className="principles"><div><span>01</span><h3>Purpose first</h3><p>Start with the problem, not the trend.</p></div><div><span>02</span><h3>Clarity in every detail</h3><p>Make every screen feel considered.</p></div><div><span>03</span><h3>Built to be useful</h3><p>Real functionality, not just a pretty surface.</p></div></div>
           </div>
         </section>
@@ -119,14 +119,14 @@ function App() {
         <section className="contact-section section-wrap">
           <div className="contact-orb" aria-hidden="true">✳</div>
           <div><div className="section-label"><span>04</span> / NEXT UP</div><h2>Have a good idea?<br /><span>Let’s make it happen.</span></h2></div>
-          <a className="button button-dark" href="mailto:hello@mosweb.gr">Get in touch <Arrow /></a>
+          <a className="button button-dark" href="mailto:basilismoskofidis@gmail.com">Get in touch <Arrow /></a>
         </section>
       </main>
 
       <footer className="site-footer">
         <a className="brand footer-brand" href="#top"><img src={mosweb} alt="" /><span>MOS<span className="brand-accent">WEB</span></span></a>
         <p>Independent thinking. Useful digital products.</p>
-        <div className="footer-bottom"><span>© {new Date().getFullYear()} MosWeb. All rights reserved.</span><a href="#top">BACK TO TOP ↑</a><a href="mailto:hello@mosweb.gr">CONTACT</a></div>
+        <div className="footer-bottom"><span>© {new Date().getFullYear()} MosWeb. All rights reserved.</span><a href="#top">BACK TO TOP ↑</a><a href="mailto:basilismoskofidis@gmail.com">CONTACT</a></div>
       </footer>
     </div>
   )
