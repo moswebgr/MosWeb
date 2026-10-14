@@ -1,151 +1,134 @@
 import mosweb from './assets/mosweb.jpg'
 import './App.css'
 
-const suiteApps = [
-  {
-    name: 'GridForge',
-    description: 'Plan your schedule with calendar views, event management, and import/export tools.',
-  },
-  {
-    name: 'SlideSpark',
-    description: 'Create and edit presentations, arrange slides, and present your ideas.',
-  },
-  {
-    name: 'PlanPilot',
-    description: 'Organize tasks, set due dates, prioritize work, and track progress.',
-  },
-  {
-    name: 'DataNest',
-    description: 'Manage structured records with custom fields, tables, and CSV import/export.',
-  },
-  {
-    name: 'MailNest',
-    description: 'A mail workspace with folder views, message composition, local drafts, and Outlook connection controls.',
-  },
+const projects = [
+  { name: 'GridForge', category: 'CALENDAR & PLANNING', description: 'A clearer way to organize events, schedules, and the moving parts of your week.', symbol: '▦', tone: 'blue' },
+  { name: 'SlideSpark', category: 'PRESENTATIONS', description: 'Shape ideas into presentations, organize slides, and share your message with confidence.', symbol: '▤', tone: 'orange' },
+  { name: 'PlanPilot', category: 'TASK MANAGEMENT', description: 'Bring tasks, priorities, and deadlines together so your next step is always clear.', symbol: '✓', tone: 'green' },
+  { name: 'DataNest', category: 'DATA & ORGANIZATION', description: 'Keep structured information organized with flexible records, tables, and CSV tools.', symbol: '▥', tone: 'purple' },
+  { name: 'MailNest', category: 'EMAIL WORKSPACE', description: 'A focused mail workspace with folders, message composition, and local drafts.', symbol: '✉', tone: 'pink' },
 ]
+
+function Arrow() {
+  return <span aria-hidden="true" className="arrow">↗</span>
+}
 
 function App() {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={mosweb} className="mosweb-logo" alt="MosWeb logo" />
-        </div>
-        <div>
-          <h1>Welcome to MosWeb</h1>
-          <p className="hero-subtitle">
-            We build modern web applications and useful digital experiences.
-          </p>
-        </div>
-      </section>
+    <div className="site-shell">
+      <header className="site-header">
+        <a className="brand" href="#top" aria-label="MosWeb home">
+          <img src={mosweb} alt="" />
+          <span>MOS<span className="brand-accent">WEB</span></span>
+        </a>
+        <nav className="main-nav" aria-label="Main navigation">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#process">Approach</a>
+        </nav>
+        <a className="header-cta" href="mailto:hello@mosweb.gr">Let’s talk <Arrow /></a>
+      </header>
 
-      <div className="ticks" aria-hidden="true"></div>
-
-      <section id="portfolio" aria-labelledby="portfolio-title">
-        <div className="portfolio-heading">
-          <span className="eyebrow">SELECTED PROJECT</span>
-          <h2 id="portfolio-title">Our Works</h2>
-          <p>Tools and digital products designed to make everyday work simpler.</p>
-        </div>
-
-        <article className="project-card">
-          <div className="project-mark" aria-hidden="true">
-            <span className="mark-tile mark-blue"></span>
-            <span className="mark-tile mark-green"></span>
-            <span className="mark-tile mark-yellow"></span>
-            <span className="mark-tile mark-red"></span>
-          </div>
-          <div className="project-content">
-            <div className="project-meta">
-              <span className="project-type">PRODUCTIVITY SUITE</span>
-              <span className="project-status">In active development</span>
+      <main id="top">
+        <section className="hero section-wrap">
+          <div className="hero-copy">
+            <div className="availability"><span className="availability-dot" /> INDEPENDENT DIGITAL STUDIO</div>
+            <h1>We build digital<br /><span>things that matter.</span></h1>
+            <p className="hero-lede">Thoughtful web experiences and useful products, made with purpose, clarity, and a little curiosity.</p>
+            <div className="hero-actions">
+              <a className="button button-dark" href="#work">Explore our work <Arrow /></a>
+              <a className="text-link" href="mailto:hello@mosweb.gr">Start a conversation <span aria-hidden="true">↗</span></a>
             </div>
-            <h3>MosSuite</h3>
-            <p className="project-description">
-              MosSuite is a collection of free, open-source, browser-based productivity
-              apps brought together in one workspace. It aims to give people practical
-              tools for planning, creating presentations, organizing information, and
-              working with email—all with a consistent, responsive experience.
-            </p>
+          </div>
+          <div className="hero-art" aria-label="Abstract geometric artwork representing digital ideas" role="img">
+            <div className="art-grid" />
+            <div className="art-orbit orbit-one" />
+            <div className="art-orbit orbit-two" />
+            <div className="art-core"><span>M</span></div>
+            <div className="art-chip chip-one">DESIGN</div>
+            <div className="art-chip chip-two">BUILD</div>
+            <div className="art-chip chip-three">REFINE</div>
+            <div className="art-spark">✳</div>
+          </div>
+          <div className="hero-bottom">
+            <span>DESIGN-LED. BUILT FOR REAL LIFE.</span>
+            <a href="#work">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+          </div>
+        </section>
 
-            <div className="app-list" aria-label="MosSuite applications">
-              {suiteApps.map((app) => (
-                <div className="suite-app" key={app.name}>
-                  <h4>{app.name}</h4>
-                  <p>{app.description}</p>
+        <section className="intro section-wrap" id="about">
+          <div className="section-label"><span>01</span> / A LITTLE ABOUT US</div>
+          <div className="intro-content">
+            <h2>Good digital work should feel <span>simple, useful, and unmistakably human.</span></h2>
+            <p>MosWeb is an independent digital studio creating modern web experiences and practical software. We focus on clear interfaces, thoughtful details, and tools that help people get things done.</p>
+          </div>
+        </section>
+
+        <section className="work-section section-wrap" id="work">
+          <div className="section-topline">
+            <div>
+              <div className="section-label"><span>02</span> / SELECTED WORK</div>
+              <h2>Ideas, made <span>real.</span></h2>
+            </div>
+            <p>A growing collection of digital products built to make everyday work better.</p>
+          </div>
+
+          <article className="featured-project">
+            <div className="featured-visual">
+              <div className="suite-window">
+                <div className="window-top"><div className="window-dots"><i /><i /><i /></div><span>mossuite / workspace</span><span className="window-menu">•••</span></div>
+                <div className="suite-preview">
+                  <aside className="preview-sidebar"><div className="preview-logo"><b>m</b><span>mos<span>suite</span></span></div><div className="preview-nav active">◫ <span>Overview</span></div><div className="preview-nav">▦ <span>Calendar</span></div><div className="preview-nav">✓ <span>Tasks</span></div><div className="preview-nav">▤ <span>Presentations</span></div><div className="preview-nav">✉ <span>Mail</span></div><div className="preview-sidebar-bottom">YOUR WORKSPACE</div></aside>
+                  <div className="preview-main"><div className="preview-greeting">YOUR WORKSPACE <span>↗</span></div><h4>Make room for<br />great work.</h4><div className="preview-cards"><div className="mini-card mini-blue"><b>▦</b><span>GridForge</span><small>Calendar</small></div><div className="mini-card mini-yellow"><b>▤</b><span>SlideSpark</span><small>Presentations</small></div><div className="mini-card mini-green"><b>✓</b><span>PlanPilot</span><small>Tasks</small></div><div className="mini-card mini-purple"><b>▥</b><span>DataNest</span><small>Data</small></div></div></div>
                 </div>
-              ))}
+              </div>
+              <div className="visual-caption">ONE WORKSPACE. MANY POSSIBILITIES.</div>
             </div>
-
-            <p className="project-note">
-              The suite is evolving; some features run locally in the browser, while
-              integrations such as Outlook require valid provider configuration.
-            </p>
-
-            <div className="project-links">
-              <a
-                className="project-link project-link-primary"
-                href="https://moswebgr.github.io/Office/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Explore MosSuite <span aria-hidden="true">↗</span>
-              </a>
-              <a
-                className="project-link"
-                href="https://github.com/moswebgr/Office"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg className="button-icon" aria-hidden="true" viewBox="0 0 24 24">
-                  <path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.53v-2.08c-3.1.68-3.76-1.32-3.76-1.32-.5-1.3-1.24-1.65-1.24-1.65-1.01-.7.08-.69.08-.69 1.12.08 1.7 1.15 1.7 1.15.99 1.7 2.6 1.21 3.23.92.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.54.23 2.68.11 2.96.72.78 1.15 1.77 1.15 2.99 0 4.29-2.62 5.24-5.11 5.51.4.35.75 1.02.75 2.06V22c0 .29.2.63.76.52A11.1 11.1 0 0 0 12 .9Z" />
-                </svg>
-                View source
-              </a>
+            <div className="featured-info">
+              <div className="project-kicker"><span className="project-dot" /> OPEN-SOURCE PRODUCT</div>
+              <h3>MosSuite</h3>
+              <p>A collection of free, open-source productivity apps brought together in one browser-based workspace. Built around a simple idea: useful tools should be accessible, connected, and easy to use.</p>
+              <div className="tag-row"><span>Product design</span><span>Web applications</span><span>Open source</span></div>
+              <a className="button button-light" href="https://moswebgr.github.io/Office/" target="_blank" rel="noreferrer">Explore MosSuite <Arrow /></a>
+              <a className="source-link" href="https://github.com/moswebgr/Office" target="_blank" rel="noreferrer">View source on GitHub <Arrow /></a>
             </div>
+          </article>
+
+          <div className="project-grid-heading"><span>INSIDE MOSSUITE</span><span>05 APPLICATIONS / ONE ECOSYSTEM</span></div>
+          <div className="project-grid">
+            {projects.map((project, index) => (
+              <article className="product-card" key={project.name}>
+                <div className="product-card-top"><span className={`product-symbol ${project.tone}`}>{project.symbol}</span><span className="product-number">0{index + 1}</span></div>
+                <div className="product-category">{project.category}</div>
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
+                <a href="https://moswebgr.github.io/Office/" target="_blank" rel="noreferrer" aria-label={`Explore ${project.name}`}>Explore app <Arrow /></a>
+              </article>
+            ))}
           </div>
-        </article>
-      </section>
+        </section>
 
-      <div className="ticks" aria-hidden="true"></div>
+        <section className="approach-section" id="process">
+          <div className="section-wrap approach-inner">
+            <div className="section-label"><span>03</span> / HOW WE THINK</div>
+            <div className="approach-copy"><h2>Less noise.<br /><span>More meaning.</span></h2><p>We believe the best digital experiences don’t need to shout. They need to solve the right problem, respect people’s time, and make the complex feel clear.</p><a className="button button-dark" href="mailto:hello@mosweb.gr">Have a project in mind? <Arrow /></a></div>
+            <div className="principles"><div><span>01</span><h3>Purpose first</h3><p>Start with the problem, not the trend.</p></div><div><span>02</span><h3>Clarity in every detail</h3><p>Make every screen feel considered.</p></div><div><span>03</span><h3>Built to be useful</h3><p>Real functionality, not just a pretty surface.</p></div></div>
+          </div>
+        </section>
 
-      <section id="social">
-        <svg className="icon" role="presentation" aria-hidden="true">
-          <use href="/icons.svg#social-icon"></use>
-        </svg>
-        <h2>Connect with us</h2>
-        <p>Follow MosWeb and explore our work.</p>
-        <ul>
-          <li>
-            <a href="https://github.com/moswebgr" target="_blank" rel="noreferrer">
-              <svg className="button-icon" role="presentation" aria-hidden="true">
-                <use href="/icons.svg#github-icon"></use>
-              </svg>
-              GitHub
-            </a>
-          </li>
-          <li>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">
-              <svg className="button-icon" role="presentation" aria-hidden="true">
-                <use href="/icons.svg#facebook-icon"></use>
-              </svg>
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">
-              <svg className="button-icon" role="presentation" aria-hidden="true">
-                <use href="/icons.svg#instagram-icon"></use>
-              </svg>
-              Instagram
-            </a>
-          </li>
-        </ul>
-      </section>
+        <section className="contact-section section-wrap">
+          <div className="contact-orb" aria-hidden="true">✳</div>
+          <div><div className="section-label"><span>04</span> / NEXT UP</div><h2>Have a good idea?<br /><span>Let’s make it happen.</span></h2></div>
+          <a className="button button-dark" href="mailto:hello@mosweb.gr">Get in touch <Arrow /></a>
+        </section>
+      </main>
 
-      <div className="ticks" aria-hidden="true"></div>
-      <section id="spacer"></section>
-    </>
+      <footer className="site-footer">
+        <a className="brand footer-brand" href="#top"><img src={mosweb} alt="" /><span>MOS<span className="brand-accent">WEB</span></span></a>
+        <p>Independent thinking. Useful digital products.</p>
+        <div className="footer-bottom"><span>© {new Date().getFullYear()} MosWeb. All rights reserved.</span><a href="#top">BACK TO TOP ↑</a><a href="mailto:hello@mosweb.gr">CONTACT</a></div>
+      </footer>
+    </div>
   )
 }
 
