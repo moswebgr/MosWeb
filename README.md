@@ -1,22 +1,29 @@
 # MosWeb
 
-Official website of MosWeb, showcasing projects, web applications, and digital solutions.
+Official website and portfolio for MosWeb, showcasing web applications and digital products.
 
 ## 🌐 Website
 
 Visit: https://www.mosweb.gr
 
-## 🚀 About
+## 🚀 Featured project: MosSuite
 
-MosWeb is focused on creating modern web applications, digital platforms, and innovative software solutions. This repository contains the source code of the official MosWeb website.
+[MosSuite](https://moswebgr.github.io/Office/) is a free, open-source collection of browser-based productivity apps presented through a shared website and workspace. The portfolio showcases its current applications:
 
-## ✨ Features
+- **GridForge** — calendar and schedule management.
+- **SlideSpark** — create, edit, arrange, and present slides.
+- **PlanPilot** — organize tasks, priorities, due dates, and progress.
+- **DataNest** — manage structured records, custom fields, and CSV import/export.
+- **MailNest** — email workspace with folder views, message composition, local drafts, and Outlook connection controls.
 
-- Modern and responsive design
-- Fast and lightweight performance
-- Project showcase
-- Contact section
-- Optimized user experience
+MosSuite is actively evolving. Some features run locally in the browser, and external integrations such as Outlook require valid provider configuration. Visit the [live MosSuite website](https://moswebgr.github.io/Office/) or browse the [source repository](https://github.com/moswebgr/Office).
+
+## ✨ MosWeb website features
+
+- Modern, responsive project portfolio.
+- Featured project card with product overview and direct links.
+- Responsive layout for desktop and mobile.
+- Links to MosWeb community and source code.
 
 ## 🛠️ Technologies
 
@@ -47,6 +54,6 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-Made with by MosWeb
+Made by MosWeb.
 
 Website: https://www.mosweb.gr
