@@ -126,7 +126,7 @@ function App() {
       <footer className="site-footer">
         <a className="brand footer-brand" href="#top"><img src={mosweb} alt="" /><span>MOS<span className="brand-accent">WEB</span></span></a>
         <p>Independent thinking. Useful digital products.</p>
-        <div className="footer-bottom"><span>© {new Date().getFullYear()} MosWeb. All rights reserved.</span><a href="#top">BACK TO TOP ↑</a><a href="mailto:basilismoskofidis@gmail.com">CONTACT</a></div>
+        <div className="footer-bottom"><span>© {new Date().getFullYear()} MosWeb. All rights reserved.</span><span className="footer-credit">Made by <strong>Vasilis Moskofidis</strong></span><a href="#top">BACK TO TOP ↑</a><a href="mailto:basilismoskofidis@gmail.com">CONTACT</a></div>
       </footer>
     </div>
   )
