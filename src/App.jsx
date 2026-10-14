@@ -34,7 +34,7 @@ function App() {
           <div className="hero-copy">
             <div className="availability"><span className="availability-dot" /> INDEPENDENT DIGITAL STUDIO</div>
             <h1>We build digital<br /><span>things that matter.</span></h1>
-            <p className="hero-lede">Thoughtful web experiences and useful products, made with purpose, clarity, and a little curiosity.</p>
+            <p className="hero-lede">I specialize in building modern web applications and open-source software, creating practical digital tools with clear interfaces and real functionality.</p>
             <div className="hero-actions">
               <a className="button button-dark" href="#work">Explore our work <Arrow /></a>
               <a className="text-link" href="mailto:basilismoskofidis@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
@@ -57,10 +57,10 @@ function App() {
         </section>
 
         <section className="intro section-wrap" id="about">
-          <div className="section-label"><span>01</span> / A LITTLE ABOUT US</div>
+          <div className="section-label"><span>01</span> / ABOUT ME</div>
           <div className="intro-content">
-            <h2>Good digital work should feel <span>simple, useful, and unmistakably human.</span></h2>
-            <p>MosWeb is an independent digital studio creating modern web experiences and practical software. We focus on clear interfaces, thoughtful details, and tools that help people get things done.</p>
+            <h2>Open-source software and web apps, built <span>to be useful, accessible, and easy to use.</span></h2>
+            <p>I’m Vasilis Moskofidis, an independent developer focused on web applications and open-source projects. I specialize in building practical software, user-friendly interfaces, and connected digital tools. My goal is to make useful technology more accessible by creating projects people can explore, use, and contribute to.</p>
           </div>
         </section>
 
