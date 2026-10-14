@@ -152,3 +152,56 @@
     border-right-color: var(--border);
   }
 }
+
+
+/* MosSuite portfolio */
+.hero .mosweb-logo{max-width:min(100%,340px);object-fit:contain}
+#center{padding:56px 24px 48px}
+#center h1{margin:20px 0 8px}
+.hero-subtitle{max-width:620px;color:#b8b8c4;margin:0 auto}
+#portfolio{padding:52px 40px 60px;border-top:1px solid var(--border);text-align:left}
+.portfolio-heading{max-width:760px;margin:0 auto 28px;text-align:center}
+.eyebrow,.project-type{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--accent)}
+.portfolio-heading h2{margin:8px 0}
+.portfolio-heading>p{color:#b8b8c4}
+.project-card{max-width:900px;margin:0 auto;padding:30px;display:grid;grid-template-columns:78px minmax(0,1fr);gap:24px;border:1px solid var(--border);border-radius:16px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));box-shadow:var(--shadow)}
+.project-mark{width:68px;height:68px;display:grid;grid-template-columns:repeat(2,1fr);gap:5px;align-content:center;padding:9px;border:1px solid var(--border);border-radius:16px;background:#101014;box-sizing:border-box}
+.mark-tile{display:block;border-radius:4px}
+.mark-blue{background:#1687f8}.mark-green{background:#24a148}.mark-yellow{background:#f8c537}.mark-red{background:#f04b45}
+.project-content{min-width:0}
+.project-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.project-status{font-size:12px;color:#b8b8c4;border:1px solid var(--border);border-radius:999px;padding:3px 9px}
+.project-content h3{margin:10px 0;font-size:34px;line-height:1.2;letter-spacing:-.8px;font-weight:600;color:var(--text-h)}
+.project-description,.project-note{color:#c5c5ce;line-height:1.7}
+.app-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px}
+.suite-app{padding:14px;border:1px solid var(--border);border-radius:10px;background:rgba(255,255,255,.025)}
+.suite-app h4{margin:0 0 5px;font-size:15px;font-weight:650;color:var(--text-h)}
+.suite-app p{font-size:13px;line-height:1.55;color:#b8b8c4}
+.project-note{margin-top:18px;font-size:12px;line-height:1.6}
+.project-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.project-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:0 15px;border:1px solid var(--border);border-radius:8px;color:var(--text-h);text-decoration:none;font-size:14px;font-weight:600;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.project-link:hover{transform:translateY(-1px);box-shadow:var(--shadow);border-color:var(--accent-border)}
+.project-link-primary{color:#fff;background:#2563eb;border-color:#2563eb}
+.project-link-primary:hover{background:#1d4ed8;border-color:#1d4ed8}
+.project-link .button-icon{width:17px;height:17px}
+#social{padding:36px 32px 42px;border-top:1px solid var(--border);text-align:center}
+#social .icon{margin-bottom:12px;width:22px;height:22px}
+#social h2{margin:0 0 8px}
+#social>p{color:#b8b8c4}
+#social ul{list-style:none;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:22px 0 0}
+#social ul a{color:var(--text-h);font-size:14px;border-radius:8px;border:1px solid var(--border);background:var(--social-bg);display:flex;padding:8px 12px;align-items:center;gap:8px;text-decoration:none;transition:box-shadow .3s,border-color .3s}
+#social ul a:hover{box-shadow:var(--shadow);border-color:var(--accent-border)}
+#social ul .button-icon{height:18px;width:18px}
+#spacer{height:36px;border-top:1px solid var(--border)}
+@media(max-width:760px){
+ #center{padding:36px 20px 34px;gap:14px}
+ .hero .mosweb-logo{height:150px}
+ #portfolio{padding:38px 16px 42px}
+ .project-card{grid-template-columns:1fr;gap:18px;padding:20px}
+ .project-mark{width:58px;height:58px}
+ .project-content h3{font-size:29px}
+ .app-list{grid-template-columns:1fr}
+ .project-links{flex-direction:column}
+ .project-link{width:100%;box-sizing:border-box}
+ #social{padding:30px 20px}
+}
