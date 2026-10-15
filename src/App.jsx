@@ -1,12 +1,13 @@
 import mosweb from './assets/mosweb.jpg'
 import './App.css'
 
+const logoBase = 'https://raw.githubusercontent.com/moswebgr/Office/main/'
+
 const projects = [
-  { name: 'GridForge', category: 'CALENDAR & PLANNING', description: 'A clearer way to organize events, schedules, and the moving parts of your week.', symbol: '▦', tone: 'blue' },
-  { name: 'SlideSpark', category: 'PRESENTATIONS', description: 'Shape ideas into presentations, organize slides, and share your message with confidence.', symbol: '▤', tone: 'orange' },
-  { name: 'PlanPilot', category: 'TASK MANAGEMENT', description: 'Bring tasks, priorities, and deadlines together so your next step is always clear.', symbol: '✓', tone: 'green' },
-  { name: 'DataNest', category: 'DATA & ORGANIZATION', description: 'Keep structured information organized with flexible records, tables, and CSV tools.', symbol: '▥', tone: 'purple' },
-  { name: 'MailNest', category: 'EMAIL WORKSPACE', description: 'A focused mail workspace with folders, message composition, and local drafts.', symbol: '✉', tone: 'pink' },
+  { name: 'GridForge', category: 'CALENDAR & PLANNING', description: 'A clearer way to organize events, schedules, and the moving parts of your week.', logo: `${logoBase}GridForge.png`, tone: 'blue' },
+  { name: 'SlideSpark', category: 'PRESENTATIONS', description: 'Shape ideas into presentations, organize slides, and share your message with confidence.', logo: `${logoBase}SlideSpark.png`, tone: 'orange' },
+  { name: 'DataNest', category: 'DATA & ORGANIZATION', description: 'Keep structured information organized with flexible records, tables, and CSV tools.', logo: `${logoBase}DataNest.png`, tone: 'purple' },
+  { name: 'MailNest', category: 'EMAIL WORKSPACE', description: 'A focused mail workspace with folders, message composition, and local drafts.', logo: `${logoBase}MailNest.png`, tone: 'pink' },
 ]
 
 function Arrow() {
@@ -79,7 +80,7 @@ function App() {
                 <div className="window-top"><div className="window-dots"><i /><i /><i /></div><span>mossuite / workspace</span><span className="window-menu">•••</span></div>
                 <div className="suite-preview">
                   <aside className="preview-sidebar"><div className="preview-logo"><b>m</b><span>mos<span>suite</span></span></div><div className="preview-nav active">◫ <span>Overview</span></div><div className="preview-nav">▦ <span>Calendar</span></div><div className="preview-nav">✓ <span>Tasks</span></div><div className="preview-nav">▤ <span>Presentations</span></div><div className="preview-nav">✉ <span>Mail</span></div><div className="preview-sidebar-bottom">YOUR WORKSPACE</div></aside>
-                  <div className="preview-main"><div className="preview-greeting">YOUR WORKSPACE <span>↗</span></div><h4>Make room for<br />great work.</h4><div className="preview-cards"><div className="mini-card mini-blue"><b>▦</b><span>GridForge</span><small>Calendar</small></div><div className="mini-card mini-yellow"><b>▤</b><span>SlideSpark</span><small>Presentations</small></div><div className="mini-card mini-green"><b>✓</b><span>PlanPilot</span><small>Tasks</small></div><div className="mini-card mini-purple"><b>▥</b><span>DataNest</span><small>Data</small></div></div></div>
+                  <div className="preview-main"><div className="preview-greeting">YOUR WORKSPACE <span>↗</span></div><h4>Make room for<br />great work.</h4><div className="preview-cards"><div className="mini-card mini-blue"><img src={`${logoBase}GridForge.png`} alt="" /><span>GridForge</span><small>Calendar</small></div><div className="mini-card mini-yellow"><img src={`${logoBase}SlideSpark.png`} alt="" /><span>SlideSpark</span><small>Presentations</small></div><div className="mini-card mini-purple"><img src={`${logoBase}DataNest.png`} alt="" /><span>DataNest</span><small>Data</small></div><div className="mini-card mini-pink"><img src={`${logoBase}MailNest.png`} alt="" /><span>MailNest</span><small>Email</small></div></div></div>
                 </div>
               </div>
               <div className="visual-caption">ONE WORKSPACE. MANY POSSIBILITIES.</div>
@@ -94,11 +95,11 @@ function App() {
             </div>
           </article>
 
-          <div className="project-grid-heading"><span>INSIDE MOSSUITE</span><span>05 APPLICATIONS / ONE ECOSYSTEM</span></div>
+          <div className="project-grid-heading"><span>INSIDE MOSSUITE</span><span>04 APPLICATIONS / ONE ECOSYSTEM</span></div>
           <div className="project-grid">
             {projects.map((project, index) => (
               <article className="product-card" key={project.name}>
-                <div className="product-card-top"><span className={`product-symbol ${project.tone}`}>{project.symbol}</span><span className="product-number">0{index + 1}</span></div>
+                <div className="product-card-top"><img className={`product-logo ${project.tone}`} src={project.logo} alt={`${project.name} logo`} loading="lazy" /><span className="product-number">0{index + 1}</span></div>
                 <div className="product-category">{project.category}</div>
                 <h3>{project.name}</h3>
                 <p>{project.description}</p>
