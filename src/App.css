@@ -286,3 +286,151 @@ a:hover .arrow{transform:translate(2px,-2px)}
     height: 14px;
   }
 }
+
+
+/* Hard size limits for every project/logo image and the MosSuite feature panel. */
+.site-header .brand img,
+.site-footer .footer-brand img {
+  width: 24px !important;
+  height: 24px !important;
+  max-width: 24px;
+  object-fit: contain;
+}
+.product-card .product-logo {
+  width: 24px !important;
+  height: 24px !important;
+  max-width: 24px;
+  max-height: 24px;
+  border-radius: 5px;
+  object-fit: contain;
+}
+.mini-card img {
+  width: 14px !important;
+  height: 14px !important;
+  max-width: 14px;
+  max-height: 14px;
+  object-fit: contain;
+}
+.featured-project {
+  max-width: 1000px;
+  margin-inline: auto;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .82fr);
+}
+.featured-visual {
+  min-width: 0;
+  padding: 22px 22px 18px !important;
+}
+.suite-window {
+  width: 100%;
+  max-width: 450px;
+  margin-inline: auto;
+  transform: none;
+}
+.suite-preview {
+  min-height: 205px !important;
+}
+.preview-sidebar {
+  padding: 10px 7px !important;
+  gap: 8px !important;
+}
+.preview-logo b {
+  width: 17px;
+  height: 17px;
+  font-size: 12px;
+}
+.preview-main {
+  min-width: 0;
+  padding: 14px 12px !important;
+}
+.preview-main h4 {
+  font-size: 19px !important;
+  margin: 9px 0 12px !important;
+}
+.preview-cards {
+  gap: 6px;
+}
+.mini-card {
+  min-width: 0;
+  min-height: 55px !important;
+  padding: 6px !important;
+  gap: 3px !important;
+}
+.mini-card span {
+  font-size: 8px;
+}
+.mini-card small {
+  font-size: 6px;
+}
+.featured-info {
+  min-width: 0;
+  padding: 28px !important;
+}
+.featured-info h3 {
+  font-size: 34px !important;
+  margin: 13px 0 10px !important;
+}
+.featured-info > p {
+  font-size: 12px;
+  line-height: 1.7 !important;
+  margin-bottom: 14px !important;
+}
+.tag-row {
+  margin-bottom: 14px !important;
+}
+.project-grid {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+.product-card {
+  min-width: 0;
+  min-height: 190px !important;
+  padding: 17px !important;
+}
+.product-card-top {
+  margin-bottom: 12px !important;
+}
+.product-card h3 {
+  font-size: 19px;
+}
+.product-card p {
+  font-size: 10px;
+  line-height: 1.65;
+}
+@media (max-width: 900px) {
+  .featured-project {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 720px;
+  }
+  .featured-visual {
+    padding: 20px 18px 15px !important;
+  }
+  .featured-info {
+    padding: 24px !important;
+  }
+}
+@media (max-width: 600px) {
+  .site-header .brand img,
+  .site-footer .footer-brand img {
+    width: 22px !important;
+    height: 22px !important;
+  }
+  .product-card .product-logo {
+    width: 23px !important;
+    height: 23px !important;
+  }
+  .featured-visual {
+    padding: 14px 10px 12px !important;
+  }
+  .suite-preview {
+    min-height: 190px !important;
+  }
+  .preview-main {
+    padding: 12px 8px !important;
+  }
+  .preview-main h4 {
+    font-size: 17px !important;
+  }
+  .featured-info {
+    padding: 20px 17px !important;
+  }
+}
