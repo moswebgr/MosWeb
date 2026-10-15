@@ -434,3 +434,126 @@ a:hover .arrow{transform:translate(2px,-2px)}
     padding: 20px 17px !important;
   }
 }
+
+
+/* Final layout stabilization: prevent cramped panels and viewport overflow. */
+html, body, #root {
+  width: 100%;
+  max-width: 100%;
+}
+body {
+  overflow-x: clip;
+}
+.site-shell {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+img, svg, video, canvas {
+  max-width: 100%;
+}
+.site-header {
+  width: 100%;
+}
+.hero-copy, .hero-art, .intro-content, .featured-visual, .featured-info,
+.preview-sidebar, .preview-main, .product-card, .approach-copy, .principles {
+  min-width: 0;
+}
+.featured-project {
+  width: 100%;
+  max-width: 1000px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .82fr);
+}
+.suite-window {
+  max-width: 100%;
+}
+.suite-preview {
+  grid-template-columns: minmax(0, 34%) minmax(0, 66%);
+}
+.preview-nav {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.preview-nav span, .mini-card span, .mini-card small {
+  overflow-wrap: anywhere;
+}
+.product-grid, .project-grid {
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .featured-project {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 760px;
+  }
+  .featured-visual {
+    padding: 22px 20px 16px !important;
+  }
+  .suite-window {
+    width: 100%;
+    max-width: 560px;
+  }
+  .featured-info {
+    padding: 26px 28px !important;
+  }
+}
+@media (max-width: 700px) {
+  .site-header {
+    justify-content: space-between;
+  }
+  .main-nav {
+    flex-wrap: wrap;
+  }
+  .hero-bottom {
+    align-items: flex-start;
+  }
+  .hero-bottom > * {
+    min-width: 0;
+  }
+  .project-grid-heading {
+    align-items: flex-start;
+  }
+  .suite-preview {
+    grid-template-columns: minmax(0, 31%) minmax(0, 69%);
+  }
+  .preview-sidebar {
+    overflow: hidden;
+  }
+  .preview-nav {
+    font-size: 7px;
+  }
+  .featured-info {
+    overflow-wrap: anywhere;
+  }
+}
+@media (max-width: 420px) {
+  .site-header {
+    gap: 8px;
+  }
+  .main-nav {
+    gap: 12px;
+  }
+  .header-cta {
+    white-space: nowrap;
+  }
+  .hero-actions {
+    align-items: flex-start;
+  }
+  .suite-preview {
+    grid-template-columns: minmax(0, 29%) minmax(0, 71%);
+  }
+  .preview-main {
+    padding: 10px 7px !important;
+  }
+  .preview-main h4 {
+    font-size: 16px !important;
+  }
+  .mini-card span {
+    font-size: 7px;
+  }
+  .featured-info {
+    padding: 19px 15px !important;
+  }
+  .footer-bottom {
+    column-gap: 12px;
+  }
+}
