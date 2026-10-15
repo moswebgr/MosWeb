@@ -76,7 +76,7 @@ a:hover .arrow{transform:translate(2px,-2px)}
 .preview-main h4{font-size:25px;line-height:1.12;letter-spacing:-.06em;font-weight:600;margin:14px 0 19px;color:#34372e}
 .preview-cards{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .mini-card{min-height:76px;border:1px solid #e4e5db;border-radius:5px;padding:9px;display:flex;flex-direction:column;gap:5px;background:#fffefb}
-.mini-card b{font-size:13px}.mini-card span{font-size:9px;font-weight:800}.mini-card small{font-size:7px;color:#9b9d91}
+.mini-card img{width:22px;height:22px;object-fit:contain}.mini-card span{font-size:9px;font-weight:800}.mini-card small{font-size:7px;color:#9b9d91}
 .mini-blue b{color:#5c89a7}.mini-yellow b{color:#b49a50}.mini-green b{color:#7b9870}.mini-purple b{color:#9484ae}
 .visual-caption{margin-top:22px;color:#939587;font-size:8px}
 .featured-info{padding:52px 44px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
@@ -93,7 +93,7 @@ a:hover .arrow{transform:translate(2px,-2px)}
 .product-card{padding:23px 23px 20px;background:#fdfdf9;border:1px solid #e6e7df;border-radius:6px;min-height:242px;display:flex;flex-direction:column;align-items:flex-start;transition:transform .2s,border-color .2s,box-shadow .2s}
 .product-card:hover{transform:translateY(-4px);border-color:#c9ccbe;box-shadow:0 14px 35px #26291b0a}
 .product-card-top{display:flex;justify-content:space-between;align-items:center;width:100%;margin-bottom:22px}
-.product-symbol{width:37px;height:37px;display:grid;place-items:center;border-radius:10px;font-size:19px}
+.product-logo{width:42px;height:42px;display:block;object-fit:contain;border-radius:10px}.product-logo.blue{background:#e2ebef}.product-logo.orange{background:#f4e8d8}.product-logo.purple{background:#eae5f0}.product-logo.pink{background:#f3e3e3}
 .product-symbol.blue{background:#e2ebef;color:#567c8e}.product-symbol.orange{background:#f4e8d8;color:#a47a45}.product-symbol.green{background:#e5ecdf;color:#66845a}.product-symbol.purple{background:#eae5f0;color:#8874a1}.product-symbol.pink{background:#f3e3e3;color:#ad777b}
 .product-number{font:9px 'DM Mono',monospace;color:#a3a598}
 .product-category{font-size:8px;color:#96988b;letter-spacing:.1em}
