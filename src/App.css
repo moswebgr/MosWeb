@@ -182,3 +182,107 @@ a:hover .arrow{transform:translate(2px,-2px)}
   .header-cta { padding: 9px 11px; }
   .main-nav { gap: 13px; }
 }
+
+
+/* Compact project showcase: smaller app logos and a tighter featured card. */
+.product-card {
+  min-height: 210px;
+  padding: 19px 19px 17px;
+}
+.product-card-top {
+  margin-bottom: 15px;
+}
+.product-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+}
+.featured-visual {
+  padding: 28px 27px 20px;
+}
+.suite-preview {
+  min-height: 235px;
+}
+.preview-sidebar {
+  padding: 13px 8px;
+  gap: 10px;
+}
+.preview-main {
+  padding: 17px 16px;
+}
+.preview-main h4 {
+  font-size: 22px;
+  margin: 11px 0 14px;
+}
+.mini-card {
+  min-height: 65px;
+  padding: 7px;
+  gap: 4px;
+}
+.mini-card img {
+  width: 16px;
+  height: 16px;
+}
+.featured-info {
+  padding: 34px 34px;
+}
+.featured-info h3 {
+  font-size: 38px;
+  margin: 16px 0 12px;
+}
+.featured-info > p {
+  line-height: 1.75;
+  margin-bottom: 17px;
+}
+.tag-row {
+  margin-bottom: 18px;
+}
+.visual-caption {
+  margin-top: 15px;
+}
+
+@media (max-width: 900px) {
+  .featured-visual {
+    padding: 26px 36px 20px;
+  }
+  .featured-info {
+    padding: 28px 30px;
+  }
+}
+@media (max-width: 600px) {
+  .product-card {
+    min-height: 175px;
+    padding: 17px;
+  }
+  .product-card-top {
+    margin-bottom: 12px;
+  }
+  .product-logo {
+    width: 28px;
+    height: 28px;
+  }
+  .featured-visual {
+    padding: 18px 12px 15px;
+  }
+  .suite-preview {
+    min-height: 205px;
+  }
+  .featured-info {
+    padding: 23px 19px;
+  }
+  .featured-info h3 {
+    font-size: 34px;
+    margin: 13px 0 10px;
+  }
+  .featured-info > p {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+  .mini-card {
+    min-height: 58px;
+  }
+  .mini-card img {
+    width: 14px;
+    height: 14px;
+  }
+}
