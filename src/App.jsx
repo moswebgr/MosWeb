@@ -90,7 +90,7 @@ function App() {
             <a href="#process" onClick={closeMenu}><span>04</span> Approach <Arrow /></a>
           </nav>
           <div className="fullscreen-menu-bottom">
-            <span>OPEN SOURCE. BUILT FOR REAL LIFE.</span>
+            <span>MOSWEB / DIGITAL STUDIO</span>
             <a href="mailto:basilismoskofidis@gmail.com" onClick={closeMenu}>Let’s talk <Arrow /></a>
           </div>
         </div>
@@ -118,7 +118,7 @@ function App() {
             <div className="art-spark">✳</div>
           </div>
           <div className="hero-bottom">
-            <span>OPEN SOURCE. BUILT FOR REAL LIFE.</span>
+            <span>MOSWEB / DIGITAL STUDIO</span>
             <a href="#work">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
           </div>
         </section>
