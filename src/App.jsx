@@ -5,10 +5,10 @@ import './App.css'
 const logoBase = 'https://raw.githubusercontent.com/moswebgr/Office/main/'
 
 const projects = [
-  { name: 'GridForge', category: 'CALENDAR & PLANNING', description: 'A clearer way to organize events, schedules, and the moving parts of your week.', logo: `${logoBase}gridforge.png`, tone: 'blue' },
-  { name: 'SlideSpark', category: 'PRESENTATIONS', description: 'Shape ideas into presentations, organize slides, and share your message with confidence.', logo: `${logoBase}SlideSpark.png`, tone: 'orange' },
-  { name: 'DataNest', category: 'DATA & ORGANIZATION', description: 'Keep structured information organized with flexible records, tables, and CSV tools.', logo: `${logoBase}datanest-removebg-preview.png`, tone: 'purple' },
-  { name: 'MailNest', category: 'EMAIL WORKSPACE', description: 'A focused mail workspace with folders, message composition, and local drafts.', logo: `${logoBase}mailnest.jpg`, tone: 'pink' },
+  { name: 'GridForge', filter: 'planning', category: 'CALENDAR & PLANNING', description: 'A clearer way to organize events, schedules, and the moving parts of your week.', logo: `${logoBase}gridforge.png`, tone: 'blue' },
+  { name: 'SlideSpark', filter: 'creative', category: 'PRESENTATIONS', description: 'Shape ideas into presentations, organize slides, and share your message with confidence.', logo: `${logoBase}SlideSpark.png`, tone: 'orange' },
+  { name: 'DataNest', filter: 'data', category: 'DATA & ORGANIZATION', description: 'Keep structured information organized with flexible records, tables, and CSV tools.', logo: `${logoBase}datanest-removebg-preview.png`, tone: 'purple' },
+  { name: 'MailNest', filter: 'email', category: 'EMAIL WORKSPACE', description: 'A focused mail workspace with folders, message composition, and local drafts.', logo: `${logoBase}mailnest.jpg`, tone: 'pink' },
 ]
 
 function Arrow() {
@@ -17,6 +17,30 @@ function Arrow() {
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [projectQuery, setProjectQuery] = useState('')
+  const [activeFilter, setActiveFilter] = useState('all')
+  const [scrollProgress, setScrollProgress] = useState(0)
+
+  const filteredProjects = projects.filter((project) => {
+    const matchesFilter = activeFilter === 'all' || project.filter === activeFilter
+    const query = projectQuery.trim().toLowerCase()
+    const matchesQuery = !query || `${project.name} ${project.category} ${project.description}`.toLowerCase().includes(query)
+    return matchesFilter && matchesQuery
+  })
+
+  useEffect(() => {
+    const updateProgress = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight
+      setScrollProgress(scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0)
+    }
+    updateProgress()
+    window.addEventListener('scroll', updateProgress, { passive: true })
+    window.addEventListener('resize', updateProgress)
+    return () => {
+      window.removeEventListener('scroll', updateProgress)
+      window.removeEventListener('resize', updateProgress)
+    }
+  }, [])
 
   useEffect(() => {
     const handleKeyDown = (event) => {
