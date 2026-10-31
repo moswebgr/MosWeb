@@ -894,3 +894,39 @@ body, #root, .site-shell {
 @media (prefers-reduced-motion: reduce) {
   .site-shell, .featured-project, .product-card { transition: none !important; }
 }
+
+
+/* Readability and project-card sizing refinement — keep the existing one-page layout. */
+.product-card { min-height: 250px !important; padding: 25px !important; }
+.product-card .product-logo { width: 42px !important; height: 42px !important; max-width: 42px; max-height: 42px; border-radius: 9px; }
+.product-card-top { margin-bottom: 20px !important; }
+.product-category { font-size: 10px; }
+.product-card h3 { font-size: 24px; }
+.product-card p { font-size: 13px; line-height: 1.8; }
+.product-card > a { font-size: 12px; }
+.hero-lede { font-size: 17px; }
+.intro-content p { font-size: 16px; }
+.section-topline > p { font-size: 15px; }
+.featured-info > p { font-size: 15px; line-height: 1.85 !important; }
+.project-kicker { font-size: 10px; }
+.tag-row span { font-size: 11px; padding: 8px 11px; }
+.approach-copy > p { font-size: 15px; }
+.principles h3 { font-size: 15px; }
+.principles p { font-size: 13px; line-height: 1.8; }
+.availability, .section-label { font-size: 11px; }
+.main-nav a, .text-link { font-size: 13px; }
+.header-cta, .button { font-size: 13px; }
+.site-footer > p { font-size: 14px; line-height: 1.8; }
+.footer-bottom { font-size: 10px; }
+.footer-brand img { width: 34px !important; height: 34px !important; }
+@media (max-width: 700px) {
+  .product-card { min-height: 225px !important; padding: 22px !important; }
+  .product-card .product-logo { width: 38px !important; height: 38px !important; max-width: 38px; max-height: 38px; }
+  .product-card h3 { font-size: 23px; }
+  .product-card p { font-size: 13px; }
+  .hero-lede { font-size: 15px; }
+  .intro-content p, .featured-info > p, .approach-copy > p { font-size: 14px; }
+  .principles p { font-size: 12px; }
+  .site-footer > p { font-size: 13px; }
+  .footer-bottom { font-size: 9px; }
+}
