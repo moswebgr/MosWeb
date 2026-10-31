@@ -58,6 +58,7 @@ function App() {
 
   return (
     <div className="site-shell">
+      <div className="reading-progress" style={{ width: `${scrollProgress}%` }} aria-hidden="true" />
       <header className="site-header">
         <a className="brand" href="#top" aria-label="MosWeb home" onClick={closeMenu}>
           <img src={mosweb} alt="" />
@@ -160,9 +161,15 @@ function App() {
             </div>
           </article>
 
-          <div className="project-grid-heading"><span>INSIDE MOSSUITE</span><span>04 APPLICATIONS / ONE ECOSYSTEM</span></div>
+          <div className="project-grid-heading"><span>INSIDE MOSSUITE</span><span>{filteredProjects.length.toString().padStart(2, '0')} APPLICATIONS / ONE ECOSYSTEM</span></div>
+          <div className="project-tools">
+            <label className="project-search"><span aria-hidden="true">⌕</span><input type="search" value={projectQuery} onChange={(event) => setProjectQuery(event.target.value)} placeholder="Search applications..." aria-label="Search applications" /><kbd>⌘ K</kbd></label>
+            <div className="project-filters" aria-label="Filter applications">
+              {[['all', 'All'], ['planning', 'Planning'], ['creative', 'Creative'], ['data', 'Data'], ['email', 'Email']].map(([value, label]) => <button key={value} type="button" className={activeFilter === value ? 'active' : ''} aria-pressed={activeFilter === value} onClick={() => setActiveFilter(value)}>{label}</button>)}
+            </div>
+          </div>
           <div className="project-grid">
-            {projects.map((project, index) => (
+            {filteredProjects.length ? filteredProjects.map((project, index) => (
               <article className="product-card" key={project.name}>
                 <div className="product-card-top"><img className={`product-logo ${project.tone}`} src={project.logo} alt={`${project.name} logo`} loading="lazy" /><span className="product-number">0{index + 1}</span></div>
                 <div className="product-category">{project.category}</div>
@@ -170,7 +177,7 @@ function App() {
                 <p>{project.description}</p>
                 <a href="https://moswebgr.github.io/Office/" target="_blank" rel="noreferrer" aria-label={`Explore ${project.name}`}>Explore app <Arrow /></a>
               </article>
-            ))}
+            )) : <div className="project-empty">No applications match that search. <button type="button" onClick={() => { setProjectQuery(''); setActiveFilter('all') }}>Clear filters</button></div>}
           </div>
         </section>
 
