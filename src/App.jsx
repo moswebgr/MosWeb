@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import mosweb from './assets/mosweb.jpg'
 import './App.css'
 
@@ -15,20 +16,60 @@ function Arrow() {
 }
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') setMenuOpen(false)
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = ''
+    }
+  }, [menuOpen])
+
+  const closeMenu = () => setMenuOpen(false)
+
   return (
     <div className="site-shell">
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="MosWeb home">
+        <a className="brand" href="#top" aria-label="MosWeb home" onClick={closeMenu}>
           <img src={mosweb} alt="" />
           <span>MOS<span className="brand-accent">WEB</span></span>
         </a>
-        <nav className="main-nav" aria-label="Main navigation">
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#process">Approach</a>
-        </nav>
-        <a className="header-cta" href="mailto:basilismoskofidis@gmail.com">Let’s talk <Arrow /></a>
+        <button
+          className={`menu-toggle ${menuOpen ? 'is-open' : ''}`}
+          type="button"
+          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={menuOpen}
+          aria-controls="fullscreen-menu"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span /><span />
+        </button>
       </header>
+      <div
+        id="fullscreen-menu"
+        className={`fullscreen-menu ${menuOpen ? 'is-open' : ''}`}
+        aria-hidden={!menuOpen}
+        inert={!menuOpen}
+      >
+        <div className="fullscreen-menu-inner">
+          <div className="menu-eyebrow">MOSWEB / NAVIGATION</div>
+          <nav className="fullscreen-menu-links" aria-label="Main navigation">
+            <a href="#top" onClick={closeMenu}><span>01</span> Home <Arrow /></a>
+            <a href="#work" onClick={closeMenu}><span>02</span> Work <Arrow /></a>
+            <a href="#about" onClick={closeMenu}><span>03</span> About <Arrow /></a>
+            <a href="#process" onClick={closeMenu}><span>04</span> Approach <Arrow /></a>
+          </nav>
+          <div className="fullscreen-menu-bottom">
+            <span>OPEN SOURCE. BUILT FOR REAL LIFE.</span>
+            <a href="mailto:basilismoskofidis@gmail.com" onClick={closeMenu}>Let’s talk <Arrow /></a>
+          </div>
+        </div>
+      </div>
 
       <main id="top">
         <section className="hero section-wrap">
@@ -45,7 +86,7 @@ function App() {
             <div className="art-grid" />
             <div className="art-orbit orbit-one" />
             <div className="art-orbit orbit-two" />
-            <div className="art-core"><span>M</span></div>
+            <div className="art-core"><img src={mosweb} alt="MosWeb logo" /></div>
             <div className="art-chip chip-one">DESIGN</div>
             <div className="art-chip chip-two">BUILD</div>
             <div className="art-chip chip-three">REFINE</div>
