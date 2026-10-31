@@ -1031,3 +1031,107 @@ body, #root, .site-shell {
   .site-footer > p { font-size: 15px !important; }
   .footer-bottom { font-size: 11px !important; }
 }
+
+
+/* Functional UI: sticky navigation, reading progress, and project discovery controls. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1003;
+  background: #050505;
+  backdrop-filter: blur(16px);
+}
+.reading-progress {
+  position: fixed;
+  z-index: 1100;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #f5f5f2;
+  transition: width .08s linear;
+}
+.project-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: -22px 0 28px;
+  flex-wrap: wrap;
+}
+.project-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(100%, 330px);
+  min-height: 46px;
+  padding: 0 14px;
+  border: 1px solid #383838;
+  border-radius: 999px;
+  background: #151515;
+  color: #aaa;
+}
+.project-search > span { font-size: 22px; line-height: 1; }
+.project-search input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #f5f5f2;
+  font: 13px 'Manrope', sans-serif;
+}
+.project-search input::placeholder { color: #858585; }
+.project-search kbd {
+  padding: 3px 6px;
+  border: 1px solid #414141;
+  border-radius: 5px;
+  color: #888;
+  font: 10px 'DM Mono', monospace;
+}
+.project-filters { display: flex; flex-wrap: wrap; gap: 7px; }
+.project-filters button {
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid #383838;
+  border-radius: 999px;
+  background: transparent;
+  color: #aaa;
+  font: 12px 'Manrope', sans-serif;
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.project-filters button:hover,
+.project-filters button.active {
+  border-color: #f5f5f2;
+  background: #f5f5f2;
+  color: #050505;
+}
+.project-empty {
+  grid-column: 1 / -1;
+  padding: 36px 20px;
+  border: 1px dashed #444;
+  border-radius: 12px;
+  color: #aaa;
+  text-align: center;
+  font-size: 14px;
+}
+.project-empty button {
+  margin-left: 8px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+}
+.product-card { transition: transform .25s, border-color .25s, box-shadow .25s; }
+.product-card:hover { transform: translateY(-5px); }
+@media (max-width: 700px) {
+  .project-tools { align-items: stretch; margin-top: -10px; }
+  .project-search { width: 100%; }
+  .project-filters { gap: 6px; }
+  .project-filters button { padding-inline: 11px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reading-progress, .project-filters button, .product-card { transition: none !important; }
+}
