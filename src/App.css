@@ -733,3 +733,164 @@ img, svg, video, canvas {
     transition: none !important;
   }
 }
+
+
+/* MOSWEB DARK THEME — black canvas, white typography, preserved layout. */
+:root {
+  color: #f5f5f2;
+  background: #050505;
+  color-scheme: dark;
+}
+body, #root, .site-shell {
+  background: #050505;
+  color: #f5f5f2;
+}
+.site-header, .site-footer {
+  background: #050505;
+  border-color: #292929;
+}
+.brand, .site-header a, .site-footer a,
+.main-nav a, .header-cta, .text-link,
+.hero-bottom a, .footer-bottom a {
+  color: #f5f5f2;
+}
+.main-nav a:hover, .text-link:hover, .footer-bottom a:hover {
+  color: #bdbdbd;
+}
+.header-cta, .menu-toggle {
+  border-color: #454545;
+  color: #fff;
+  background: transparent;
+}
+.header-cta:hover, .menu-toggle:hover, .menu-toggle.is-open {
+  background: #fff;
+  border-color: #fff;
+  color: #050505;
+}
+.menu-toggle:hover span, .menu-toggle.is-open span {
+  background: #050505;
+}
+.hero h1, .intro h2, .section-topline h2,
+.approach-copy h2, .contact-section h2,
+.featured-info h3, .product-card h3,
+.principles h3, .preview-main h4 {
+  color: #f7f7f4;
+}
+.hero h1 span, .intro h2 span, .section-topline h2 span,
+.approach-copy h2 span, .contact-section h2 span {
+  color: #b7b7b0;
+}
+.availability, .hero-lede, .hero-bottom,
+.hero-bottom a, .section-label, .intro-content p,
+.section-topline > p, .project-kicker, .featured-info > p,
+.tag-row span, .source-link, .visual-caption,
+.project-grid-heading, .product-category, .product-card p,
+.approach-copy > p, .principles > div > span,
+.principles p, .site-footer > p, .footer-bottom,
+.footer-bottom a {
+  color: #c2c2bd;
+}
+.hero-bottom, .intro, .project-grid-heading,
+.footer-bottom, .site-header, .site-footer {
+  border-color: #292929;
+}
+.art-grid {
+  background-image: linear-gradient(#242424 1px,transparent 1px),
+    linear-gradient(90deg,#242424 1px,transparent 1px);
+}
+.art-orbit { border-color: #555; }
+.orbit-two { border-color: #393939; }
+.art-core {
+  background: #252525;
+  box-shadow: 0 20px 55px #000;
+}
+.art-core:before { border-color: #777; }
+.art-core img { filter: none; }
+.art-chip {
+  background: #171717;
+  border-color: #383838;
+  color: #f2f2ee;
+  box-shadow: 0 10px 30px #0008;
+}
+.art-spark { color: #c4c4bc; }
+.button-dark {
+  background: #fff;
+  color: #050505;
+}
+.button-dark:hover { background: #d8d8d8; }
+.button-light {
+  background: #252525;
+  color: #fff;
+}
+.button-light:hover { background: #383838; }
+.featured-project {
+  background: #111;
+  border-color: #303030;
+}
+.featured-visual, .approach-section {
+  background: #101010;
+}
+.suite-window {
+  background: #171717;
+  border-color: #383838;
+  box-shadow: 0 24px 55px #0008;
+}
+.window-top { border-color: #333; color: #aaa; }
+.window-dots i { background: #555; }
+.preview-sidebar {
+  background: #111;
+  border-color: #333;
+}
+.preview-logo, .preview-logo span { color: #f4f4f0; }
+.preview-logo b { background: #333; color: #fff; }
+.preview-nav { color: #aaa; }
+.preview-nav.active { background: #292929; color: #fff; }
+.preview-sidebar-bottom { color: #999; }
+.preview-main { background: #171717; }
+.preview-greeting { color: #aaa; }
+.preview-main h4 { color: #f5f5f2; }
+.mini-card {
+  background: #202020;
+  border-color: #3b3b3b;
+}
+.mini-card span { color: #f2f2ee; }
+.mini-card small { color: #b1b1aa; }
+.featured-info { background: #111; }
+.tag-row span {
+  border-color: #454545;
+  color: #deded8;
+}
+.product-card {
+  background: #111;
+  border-color: #303030;
+}
+.product-card:hover {
+  border-color: #666;
+  box-shadow: 0 14px 35px #0008;
+}
+.product-number { color: #aaa; }
+.product-logo { background-color: #252525 !important; }
+.product-card > a { color: #f5f5f2; }
+.product-card > a:hover { color: #c5c5bd; }
+.principles > div, .principles > div:first-child {
+  border-color: #383838;
+}
+.contact-orb { border-color: #444; color: #ddd; }
+.fullscreen-menu {
+  background: #050505;
+}
+.fullscreen-menu-links, .fullscreen-menu-links a {
+  border-color: #333;
+}
+.fullscreen-menu-links a { color: #f5f5f2; }
+.fullscreen-menu-links a:hover { color: #aaa; }
+.menu-eyebrow, .fullscreen-menu-bottom { color: #aaa; }
+.fullscreen-menu-bottom a {
+  color: #050505;
+  background: #fff;
+  border-color: #fff;
+}
+.footer-brand .brand-accent { color: #c2c2bd; }
+@media (prefers-reduced-motion: reduce) {
+  .site-shell, .featured-project, .product-card { transition: none !important; }
+}
