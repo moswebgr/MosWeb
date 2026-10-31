@@ -163,7 +163,7 @@ function App() {
 
           <div className="project-grid-heading"><span>INSIDE MOSSUITE</span><span>{filteredProjects.length.toString().padStart(2, '0')} APPLICATIONS / ONE ECOSYSTEM</span></div>
           <div className="project-tools">
-            <label className="project-search"><span aria-hidden="true">⌕</span><input type="search" value={projectQuery} onChange={(event) => setProjectQuery(event.target.value)} placeholder="Search applications..." aria-label="Search applications" /><kbd>⌘ K</kbd></label>
+            <label className="project-search"><span aria-hidden="true">⌕</span><input type="search" value={projectQuery} onChange={(event) => setProjectQuery(event.target.value)} placeholder="Search applications..." aria-label="Search applications" /></label>
             <div className="project-filters" aria-label="Filter applications">
               {[['all', 'All'], ['planning', 'Planning'], ['creative', 'Creative'], ['data', 'Data'], ['email', 'Email']].map(([value, label]) => <button key={value} type="button" className={activeFilter === value ? 'active' : ''} aria-pressed={activeFilter === value} onClick={() => setActiveFilter(value)}>{label}</button>)}
             </div>
