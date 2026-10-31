@@ -4,10 +4,10 @@ import './App.css'
 const logoBase = 'https://raw.githubusercontent.com/moswebgr/Office/main/'
 
 const projects = [
-  { name: 'GridForge', category: 'CALENDAR & PLANNING', description: 'A clearer way to organize events, schedules, and the moving parts of your week.', logo: `${logoBase}GridForge.png`, tone: 'blue' },
+  { name: 'GridForge', category: 'CALENDAR & PLANNING', description: 'A clearer way to organize events, schedules, and the moving parts of your week.', logo: `${logoBase}gridforge.png`, tone: 'blue' },
   { name: 'SlideSpark', category: 'PRESENTATIONS', description: 'Shape ideas into presentations, organize slides, and share your message with confidence.', logo: `${logoBase}SlideSpark.png`, tone: 'orange' },
-  { name: 'DataNest', category: 'DATA & ORGANIZATION', description: 'Keep structured information organized with flexible records, tables, and CSV tools.', logo: `${logoBase}DataNest.png`, tone: 'purple' },
-  { name: 'MailNest', category: 'EMAIL WORKSPACE', description: 'A focused mail workspace with folders, message composition, and local drafts.', logo: `${logoBase}MailNest.png`, tone: 'pink' },
+  { name: 'DataNest', category: 'DATA & ORGANIZATION', description: 'Keep structured information organized with flexible records, tables, and CSV tools.', logo: `${logoBase}datanest-removebg-preview.png`, tone: 'purple' },
+  { name: 'MailNest', category: 'EMAIL WORKSPACE', description: 'A focused mail workspace with folders, message composition, and local drafts.', logo: `${logoBase}mailnest.jpg`, tone: 'pink' },
 ]
 
 function Arrow() {
@@ -80,7 +80,7 @@ function App() {
                 <div className="window-top"><div className="window-dots"><i /><i /><i /></div><span>mossuite / workspace</span><span className="window-menu">•••</span></div>
                 <div className="suite-preview">
                   <aside className="preview-sidebar"><div className="preview-logo"><b>m</b><span>mos<span>suite</span></span></div><div className="preview-nav active">◫ <span>Overview</span></div><div className="preview-nav">▦ <span>Calendar</span></div><div className="preview-nav">✓ <span>Tasks</span></div><div className="preview-nav">▤ <span>Presentations</span></div><div className="preview-nav">✉ <span>Mail</span></div><div className="preview-sidebar-bottom">YOUR WORKSPACE</div></aside>
-                  <div className="preview-main"><div className="preview-greeting">YOUR WORKSPACE <span>↗</span></div><h4>Make room for<br />great work.</h4><div className="preview-cards"><div className="mini-card mini-blue"><img src={`${logoBase}GridForge.png`} alt="" /><span>GridForge</span><small>Calendar</small></div><div className="mini-card mini-yellow"><img src={`${logoBase}SlideSpark.png`} alt="" /><span>SlideSpark</span><small>Presentations</small></div><div className="mini-card mini-purple"><img src={`${logoBase}DataNest.png`} alt="" /><span>DataNest</span><small>Data</small></div><div className="mini-card mini-pink"><img src={`${logoBase}MailNest.png`} alt="" /><span>MailNest</span><small>Email</small></div></div></div>
+                  <div className="preview-main"><div className="preview-greeting">YOUR WORKSPACE <span>↗</span></div><h4>Make room for<br />great work.</h4><div className="preview-cards"><div className="mini-card mini-blue"><img src={`${logoBase}gridforge.png`} alt="" /><span>GridForge</span><small>Calendar</small></div><div className="mini-card mini-yellow"><img src={`${logoBase}SlideSpark.png`} alt="" /><span>SlideSpark</span><small>Presentations</small></div><div className="mini-card mini-purple"><img src={`${logoBase}datanest-removebg-preview.png`} alt="" /><span>DataNest</span><small>Data</small></div><div className="mini-card mini-pink"><img src={`${logoBase}mailnest.jpg`} alt="" /><span>MailNest</span><small>Email</small></div></div></div>
                 </div>
               </div>
               <div className="visual-caption">ONE WORKSPACE. MANY POSSIBILITIES.</div>
