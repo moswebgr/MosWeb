@@ -930,3 +930,104 @@ body, #root, .site-shell {
   .site-footer > p { font-size: 13px; }
   .footer-bottom { font-size: 9px; }
 }
+
+
+/* Clear section blocks + larger typography across the whole one-page site. */
+.hero.section-wrap,
+.intro.section-wrap,
+.work-section.section-wrap,
+.approach-section .approach-inner,
+.contact-section.section-wrap {
+  border: 1px solid #303030;
+  border-radius: 18px;
+  background: #101010;
+  padding-left: clamp(24px, 4vw, 54px);
+  padding-right: clamp(24px, 4vw, 54px);
+  margin-top: 34px;
+  margin-bottom: 34px;
+}
+.hero.section-wrap {
+  width: min(1180px, calc(100% - 80px));
+  padding-top: 90px;
+  padding-bottom: 76px;
+}
+.intro.section-wrap {
+  padding-top: 66px;
+  padding-bottom: 66px;
+  border-top: 1px solid #303030;
+}
+.work-section.section-wrap {
+  padding-top: 58px;
+  padding-bottom: 62px;
+}
+.approach-section {
+  background: transparent !important;
+  padding: 0;
+}
+.approach-section .approach-inner {
+  width: min(1180px, calc(100% - 80px));
+  padding-top: 62px;
+  padding-bottom: 62px;
+}
+.contact-section.section-wrap {
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+.hero-lede { font-size: 19px; line-height: 1.9; }
+.intro h2, .section-topline h2, .approach-copy h2, .contact-section h2 {
+  font-size: clamp(40px, 4.6vw, 62px);
+}
+.intro-content p,
+.section-topline > p,
+.featured-info > p,
+.approach-copy > p {
+  font-size: 17px;
+  line-height: 1.95;
+}
+.product-card { min-height: 270px !important; padding: 28px !important; }
+.product-card h3 { font-size: 27px; }
+.product-card p { font-size: 15px; line-height: 1.9; }
+.product-card > a { font-size: 14px; }
+.product-category, .project-kicker, .section-label, .availability { font-size: 12px; }
+.tag-row span { font-size: 13px; }
+.principles h3 { font-size: 17px; }
+.principles p { font-size: 15px; line-height: 1.9; }
+.button, .text-link, .main-nav a, .header-cta { font-size: 14px; }
+.site-footer > p { font-size: 16px !important; line-height: 1.9; }
+.footer-bottom { font-size: 12px !important; line-height: 1.8; }
+.footer-brand { font-size: 19px; }
+.footer-brand img { width: 36px !important; height: 36px !important; }
+
+@media (max-width: 700px) {
+  .hero.section-wrap,
+  .intro.section-wrap,
+  .work-section.section-wrap,
+  .approach-section .approach-inner,
+  .contact-section.section-wrap {
+    width: calc(100% - 28px);
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 14px;
+  }
+  .hero.section-wrap { padding-top: 66px; padding-bottom: 78px; }
+  .intro.section-wrap, .work-section.section-wrap,
+  .approach-section .approach-inner, .contact-section.section-wrap {
+    padding-top: 38px;
+    padding-bottom: 40px;
+  }
+  .hero-lede { font-size: 16px; }
+  .intro-content p, .section-topline > p,
+  .featured-info > p, .approach-copy > p {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+  .product-card { min-height: 235px !important; padding: 22px !important; }
+  .product-card h3 { font-size: 25px; }
+  .product-card p { font-size: 14px; }
+  .principles h3 { font-size: 16px; }
+  .principles p { font-size: 14px; }
+  .site-footer > p { font-size: 15px !important; }
+  .footer-bottom { font-size: 11px !important; }
+}
