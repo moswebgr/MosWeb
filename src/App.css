@@ -1349,3 +1349,14 @@ body, #root, .site-shell {
   .network-item:nth-child(3) { padding-left: 0; border-left: 0; }
   .network-note { margin-top: 14px; }
 }
+
+
+/* Desktop: make the header full-width like the home hero. */
+@media (min-width: 701px) {
+  .site-header {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
