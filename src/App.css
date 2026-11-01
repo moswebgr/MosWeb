@@ -1360,3 +1360,29 @@ body, #root, .site-shell {
     margin-right: 0 !important;
   }
 }
+
+
+/* Extend the homepage background video behind the header to the top edge. */
+.site-shell:has(.hero) .site-header {
+  position: relative;
+  background: transparent !important;
+  border-bottom-color: rgba(255,255,255,.16);
+}
+.site-shell:has(.hero) .hero.section-wrap {
+  width: 100% !important;
+  max-width: none !important;
+  margin-top: -120px !important;
+  margin-bottom: 34px;
+  padding-top: 210px !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+}
+@media (max-width: 700px) {
+  .site-shell:has(.hero) .hero.section-wrap {
+    width: 100% !important;
+    margin-top: -92px !important;
+    padding: 150px 24px 48px !important;
+    border-radius: 0 !important;
+  }
+}
