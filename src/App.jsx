@@ -76,10 +76,10 @@ function App() {
         <div className="fullscreen-menu-inner">
           <div className="menu-eyebrow">MOSWEB / NAVIGATION</div>
           <nav className="fullscreen-menu-links" aria-label="Main navigation">
-            <a href="/?page=home" target="_blank" rel="noopener noreferrer" onClick={closeMenu}><span>01</span> Home <Arrow /></a>
-            <a href="/?page=work" target="_blank" rel="noopener noreferrer" onClick={closeMenu}><span>02</span> Work <Arrow /></a>
-            <a href="/?page=about" target="_blank" rel="noopener noreferrer" onClick={closeMenu}><span>03</span> About <Arrow /></a>
-            <a href="/?page=approach" target="_blank" rel="noopener noreferrer" onClick={closeMenu}><span>04</span> Approach <Arrow /></a>
+            <a href="/?page=home" onClick={closeMenu}><span>01</span> Home <Arrow /></a>
+            <a href="/?page=work" onClick={closeMenu}><span>02</span> Work <Arrow /></a>
+            <a href="/?page=about" onClick={closeMenu}><span>03</span> About <Arrow /></a>
+            <a href="/?page=approach" onClick={closeMenu}><span>04</span> Approach <Arrow /></a>
           </nav>
           <div className="fullscreen-menu-bottom">
             <span>MOSWEB / DIGITAL STUDIO</span>
