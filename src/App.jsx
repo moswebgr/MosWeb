@@ -20,6 +20,7 @@ function App() {
   const [projectQuery, setProjectQuery] = useState('')
   const [activeFilter, setActiveFilter] = useState('all')
   const [scrollProgress, setScrollProgress] = useState(0)
+  const currentPage = new URLSearchParams(window.location.search).get('page') || 'home'
 
   const filteredProjects = projects.filter((project) => {
     const matchesFilter = activeFilter === 'all' || project.filter === activeFilter
@@ -60,7 +61,7 @@ function App() {
     <div className="site-shell">
       <div className="reading-progress" style={{ width: `${scrollProgress}%` }} aria-hidden="true" />
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="MosWeb home" onClick={closeMenu}>
+        <a className="brand" href="/?page=home" aria-label="MosWeb home" onClick={closeMenu}>
           <img src={mosweb} alt="" />
           <span>MOS<span className="brand-accent">WEB</span></span>
         </a>
@@ -84,10 +85,10 @@ function App() {
         <div className="fullscreen-menu-inner">
           <div className="menu-eyebrow">MOSWEB / NAVIGATION</div>
           <nav className="fullscreen-menu-links" aria-label="Main navigation">
-            <a href="#top" onClick={closeMenu}><span>01</span> Home <Arrow /></a>
-            <a href="#work" onClick={closeMenu}><span>02</span> Work <Arrow /></a>
-            <a href="#about" onClick={closeMenu}><span>03</span> About <Arrow /></a>
-            <a href="#process" onClick={closeMenu}><span>04</span> Approach <Arrow /></a>
+            <a href="/?page=home" onClick={closeMenu}><span>01</span> Home <Arrow /></a>
+            <a href="/?page=work" onClick={closeMenu}><span>02</span> Work <Arrow /></a>
+            <a href="/?page=about" onClick={closeMenu}><span>03</span> About <Arrow /></a>
+            <a href="/?page=approach" onClick={closeMenu}><span>04</span> Approach <Arrow /></a>
           </nav>
           <div className="fullscreen-menu-bottom">
             <span>MOSWEB / DIGITAL STUDIO</span>
@@ -97,13 +98,13 @@ function App() {
       </div>
 
       <main id="top">
-        <section className="hero section-wrap">
+        {currentPage === 'home' && <section className="hero section-wrap">
           <div className="hero-copy">
             <div className="availability"><span className="availability-dot" /> INDEPENDENT DIGITAL STUDIO</div>
             <h1>I build digital<br /><span>things that matter.</span></h1>
             <p className="hero-lede">I specialize in building modern web applications and open-source software, creating practical digital tools with clear interfaces and real functionality.</p>
             <div className="hero-actions">
-              <a className="button button-dark" href="#work">Explore my projects <Arrow /></a>
+              <a className="button button-dark" href="/?page=work">Explore my projects <Arrow /></a>
               <a className="text-link" href="mailto:basilismoskofidis@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
             </div>
           </div>
@@ -119,19 +120,19 @@ function App() {
           </div>
           <div className="hero-bottom">
             <span>MOSWEB / DIGITAL STUDIO</span>
-            <a href="#work">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+            <a href="/?page=work">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
           </div>
-        </section>
+        </section>}
 
-        <section className="intro section-wrap" id="about">
+        {currentPage === 'about' && <section className="intro section-wrap" id="about">
           <div className="section-label"><span>01</span> / ABOUT ME</div>
           <div className="intro-content">
             <h2>Open-source software and web apps, built <span>to be useful, accessible, and easy to use.</span></h2>
             <p>I’m Vasilis Moskofidis, an independent developer focused on web applications and open-source projects. I specialize in building practical software, user-friendly interfaces, and connected digital tools. My goal is to make useful technology more accessible by creating projects people can explore, use, and contribute to.</p>
           </div>
-        </section>
+        </section>}
 
-        <section className="work-section section-wrap" id="work">
+        {currentPage === 'work' && <section className="work-section section-wrap" id="work">
           <div className="section-topline">
             <div>
               <div className="section-label"><span>02</span> / SELECTED WORK</div>
@@ -179,27 +180,27 @@ function App() {
               </article>
             )) : <div className="project-empty">No applications match that search. <button type="button" onClick={() => { setProjectQuery(''); setActiveFilter('all') }}>Clear filters</button></div>}
           </div>
-        </section>
+        </section>}
 
-        <section className="approach-section" id="process">
+        {currentPage === 'approach' && <section className="approach-section" id="process">
           <div className="section-wrap approach-inner">
             <div className="section-label"><span>03</span> / HOW WE THINK</div>
             <div className="approach-copy"><h2>Less noise.<br /><span>More meaning.</span></h2><p>We believe the best digital experiences don’t need to shout. They need to solve the right problem, respect people’s time, and make the complex feel clear.</p><a className="button button-dark" href="mailto:basilismoskofidis@gmail.com">Explore my open-source work <Arrow /></a></div>
             <div className="principles"><div><span>01</span><h3>Purpose first</h3><p>Start with the problem, not the trend.</p></div><div><span>02</span><h3>Clarity in every detail</h3><p>Make every screen feel considered.</p></div><div><span>03</span><h3>Built to be useful</h3><p>Real functionality, not just a pretty surface.</p></div></div>
           </div>
-        </section>
+        </section>}
 
-        <section className="contact-section section-wrap">
+        {currentPage === 'home' && <section className="contact-section section-wrap">
           <div className="contact-orb" aria-hidden="true">✳</div>
           <div><div className="section-label"><span>04</span> / NEXT UP</div><h2>Interested in what I build?<br /><span>Explore my projects.</span></h2></div>
           <a className="button button-dark" href="mailto:basilismoskofidis@gmail.com">Contact me <Arrow /></a>
-        </section>
+        </section>}
       </main>
 
       <footer className="site-footer">
-        <a className="brand footer-brand" href="#top"><img src={mosweb} alt="" /><span>MOS<span className="brand-accent">WEB</span></span></a>
+        <a className="brand footer-brand" href="/?page=home"><img src={mosweb} alt="" /><span>MOS<span className="brand-accent">WEB</span></span></a>
         <p>Open-source projects. Useful digital products.</p>
-        <div className="footer-bottom"><span>© {new Date().getFullYear()} MosWeb. All rights reserved.</span><span className="footer-credit">Made by <strong>Vasilis Moskofidis</strong></span><a href="#top">BACK TO TOP ↑</a><a href="mailto:basilismoskofidis@gmail.com">CONTACT</a></div>
+        <div className="footer-bottom"><span>© {new Date().getFullYear()} MosWeb. All rights reserved.</span><span className="footer-credit">Made by <strong>Vasilis Moskofidis</strong></span><a href="/?page=home">BACK TO TOP ↑</a><a href="mailto:basilismoskofidis@gmail.com">CONTACT</a></div>
       </footer>
     </div>
   )
