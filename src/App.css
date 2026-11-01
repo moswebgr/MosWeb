@@ -1233,3 +1233,17 @@ body, #root, .site-shell {
     background: rgba(0,0,0,.58);
   }
 }
+
+
+/* Desktop: make the home hero video section full-bleed across the viewport. */
+@media (min-width: 701px) {
+  .hero.section-wrap {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+  }
+}
