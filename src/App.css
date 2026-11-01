@@ -1135,3 +1135,16 @@ body, #root, .site-shell {
 @media (prefers-reduced-motion: reduce) {
   .reading-progress, .project-filters button, .product-card { transition: none !important; }
 }
+
+
+/* Larger MosWeb logo in the header. */
+.site-header .brand img {
+  width: 52px !important;
+  height: 52px !important;
+}
+@media (max-width: 700px) {
+  .site-header .brand img {
+    width: 42px !important;
+    height: 42px !important;
+  }
+}
