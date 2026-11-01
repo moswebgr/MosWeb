@@ -1247,3 +1247,69 @@ body, #root, .site-shell {
     border-radius: 0 !important;
   }
 }
+
+
+/* Visitor network information panel on the homepage. */
+.network-section.section-wrap {
+  display: grid;
+  grid-template-columns: .72fr 1.28fr;
+  gap: 34px;
+  align-items: start;
+  padding-top: 42px;
+  padding-bottom: 38px;
+  border: 1px solid #303030;
+  border-radius: 18px;
+  background: #101010;
+}
+.network-heading h2 {
+  margin: 16px 0 10px;
+  color: #f7f7f4;
+  font-size: clamp(30px, 3vw, 42px);
+  letter-spacing: -.06em;
+}
+.network-heading h2 span { color: #b7b7b0; }
+.network-heading p, .network-note {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.network-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.network-item {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid #303030;
+  border-radius: 10px;
+  background: #151515;
+}
+.network-item span {
+  display: block;
+  margin-bottom: 10px;
+  color: #999;
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: .1em;
+}
+.network-item strong {
+  display: block;
+  overflow-wrap: anywhere;
+  color: #f5f5f2;
+  font-size: 14px;
+  font-weight: 600;
+}
+.network-note { grid-column: 2; margin: -18px 0 0; font-size: 11px; }
+@media (max-width: 700px) {
+  .network-section.section-wrap {
+    width: calc(100% - 28px);
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 30px 20px;
+    border-radius: 14px;
+  }
+  .network-grid { grid-template-columns: 1fr; }
+  .network-note { grid-column: 1; margin: -6px 0 0; }
+}
