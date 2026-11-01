@@ -17,17 +17,8 @@ function Arrow() {
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [projectQuery, setProjectQuery] = useState('')
-  const [activeFilter, setActiveFilter] = useState('all')
   const [scrollProgress, setScrollProgress] = useState(0)
   const currentPage = new URLSearchParams(window.location.search).get('page') || 'home'
-
-  const filteredProjects = projects.filter((project) => {
-    const matchesFilter = activeFilter === 'all' || project.filter === activeFilter
-    const query = projectQuery.trim().toLowerCase()
-    const matchesQuery = !query || `${project.name} ${project.category} ${project.description}`.toLowerCase().includes(query)
-    return matchesFilter && matchesQuery
-  })
 
   useEffect(() => {
     const updateProgress = () => {
@@ -162,15 +153,9 @@ function App() {
             </div>
           </article>
 
-          <div className="project-grid-heading"><span>INSIDE MOSSUITE</span><span>{filteredProjects.length.toString().padStart(2, '0')} APPLICATIONS / ONE ECOSYSTEM</span></div>
-          <div className="project-tools">
-            <label className="project-search"><span aria-hidden="true">⌕</span><input type="search" value={projectQuery} onChange={(event) => setProjectQuery(event.target.value)} placeholder="Search applications..." aria-label="Search applications" /></label>
-            <div className="project-filters" aria-label="Filter applications">
-              {[['all', 'All'], ['planning', 'Planning'], ['creative', 'Creative'], ['data', 'Data'], ['email', 'Email']].map(([value, label]) => <button key={value} type="button" className={activeFilter === value ? 'active' : ''} aria-pressed={activeFilter === value} onClick={() => setActiveFilter(value)}>{label}</button>)}
-            </div>
-          </div>
+          <div className="project-grid-heading"><span>SELECTED PROJECTS</span><span>04 PROJECTS / DIGITAL WORK</span></div>
           <div className="project-grid">
-            {filteredProjects.length ? filteredProjects.map((project, index) => (
+            {projects.map((project, index) => (
               <article className="product-card" key={project.name}>
                 <div className="product-card-top"><img className={`product-logo ${project.tone}`} src={project.logo} alt={`${project.name} logo`} loading="lazy" /><span className="product-number">0{index + 1}</span></div>
                 <div className="product-category">{project.category}</div>
@@ -178,7 +163,7 @@ function App() {
                 <p>{project.description}</p>
                 <a href="https://moswebgr.github.io/Office/" target="_blank" rel="noreferrer" aria-label={`Explore ${project.name}`}>Explore app <Arrow /></a>
               </article>
-            )) : <div className="project-empty">No applications match that search. <button type="button" onClick={() => { setProjectQuery(''); setActiveFilter('all') }}>Clear filters</button></div>}
+            ))}
           </div>
         </section>}
 
