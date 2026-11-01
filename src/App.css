@@ -1150,33 +1150,29 @@ body, #root, .site-shell {
 }
 
 
-/* Header logo image only — keep MOSWEB text at its original size. */
+/* Make the logo image substantially larger; leave the MOSWEB wordmark unchanged. */
 .site-header {
-  min-height: 88px !important;
-  height: 88px !important;
-}
-.site-header .brand {
-  gap: 10px !important;
-  font-size: 17px !important;
-  letter-spacing: -.8px !important;
+  min-height: 120px !important;
+  height: 120px !important;
 }
 .site-header .brand img {
-  width: 64px !important;
-  height: 64px !important;
+  width: 96px !important;
+  height: 96px !important;
+  min-width: 96px !important;
+  min-height: 96px !important;
   max-width: none !important;
   max-height: none !important;
+  object-fit: contain !important;
 }
 @media (max-width: 700px) {
   .site-header {
-    min-height: 72px !important;
-    height: 72px !important;
-  }
-  .site-header .brand {
-    gap: 7px !important;
-    font-size: 15px !important;
+    min-height: 92px !important;
+    height: 92px !important;
   }
   .site-header .brand img {
-    width: 48px !important;
-    height: 48px !important;
+    width: 76px !important;
+    height: 76px !important;
+    min-width: 76px !important;
+    min-height: 76px !important;
   }
 }
