@@ -19,6 +19,23 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
   const currentPage = new URLSearchParams(window.location.search).get('page') || 'home'
+  const [networkInfo, setNetworkInfo] = useState(null)
+  const [networkError, setNetworkError] = useState(false)
+
+  useEffect(() => {
+    if (currentPage !== 'home') return
+    const controller = new AbortController()
+    fetch('https://ipapi.co/json/', { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error('Network lookup failed')
+        return response.json()
+      })
+      .then((data) => setNetworkInfo(data))
+      .catch((error) => {
+        if (error.name !== 'AbortError') setNetworkError(true)
+      })
+    return () => controller.abort()
+  }, [currentPage])
 
   useEffect(() => {
     const updateProgress = () => {
@@ -173,6 +190,21 @@ function App() {
             <div className="approach-copy"><h2>Less noise.<br /><span>More meaning.</span></h2><p>We believe the best digital experiences don’t need to shout. They need to solve the right problem, respect people’s time, and make the complex feel clear.</p><a className="button button-dark" href="mailto:basilismoskofidis@gmail.com">Explore my open-source work <Arrow /></a></div>
             <div className="principles"><div><span>01</span><h3>Purpose first</h3><p>Start with the problem, not the trend.</p></div><div><span>02</span><h3>Clarity in every detail</h3><p>Make every screen feel considered.</p></div><div><span>03</span><h3>Built to be useful</h3><p>Real functionality, not just a pretty surface.</p></div></div>
           </div>
+        </section>}
+
+        {currentPage === 'home' && <section className="network-section section-wrap" aria-labelledby="network-title">
+          <div className="network-heading">
+            <div className="section-label"><span>05</span> / NETWORK CHECK</div>
+            <h2 id="network-title">Your network<span>.</span></h2>
+            <p>Public network details visible to this website.</p>
+          </div>
+          <div className="network-grid" aria-live="polite">
+            <div className="network-item"><span>PUBLIC IP ADDRESS</span><strong>{networkInfo?.ip || (networkError ? 'Unavailable' : 'Checking…')}</strong></div>
+            <div className="network-item"><span>INTERNET PROVIDER</span><strong>{networkInfo?.org || networkInfo?.asn || (networkError ? 'Unavailable' : 'Checking…')}</strong></div>
+            <div className="network-item"><span>APPROXIMATE LOCATION</span><strong>{networkInfo ? [networkInfo.city, networkInfo.region, networkInfo.country_name].filter(Boolean).join(', ') : (networkError ? 'Unavailable' : 'Checking…')}</strong></div>
+            <div className="network-item"><span>ROUTER NAME / LOCAL IP</span><strong>Not exposed by browser</strong></div>
+          </div>
+          <p className="network-note">Your router’s name and private gateway address are not normally accessible to websites. Location is approximate and based on your public IP.</p>
         </section>}
 
         {currentPage === 'home' && <section className="contact-section section-wrap">
