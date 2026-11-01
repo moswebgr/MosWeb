@@ -110,7 +110,7 @@ function App() {
             <source src="/home-background.mp4" type="video/mp4" />
           </video>
           <div className="hero-copy">
-            <div className="availability"><span className="availability-dot" /> INDEPENDENT DIGITAL STUDIO</div>
+            <div className="availability"><span className="availability-dot" /> MosWeb</div>
             <h1>I build digital<br /><span>things that matter.</span></h1>
             <p className="hero-lede">I specialize in building modern web applications and open-source software, creating practical digital tools with clear interfaces and real functionality.</p>
             <div className="hero-actions">
