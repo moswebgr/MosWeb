@@ -89,6 +89,9 @@ function App() {
 
       <main id="top">
         {currentPage === 'home' && <section className="hero section-wrap">
+          <video className="hero-background-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true">
+            <source src="/home-background.mp4" type="video/mp4" />
+          </video>
           <div className="hero-copy">
             <div className="availability"><span className="availability-dot" /> INDEPENDENT DIGITAL STUDIO</div>
             <h1>I build digital<br /><span>things that matter.</span></h1>
